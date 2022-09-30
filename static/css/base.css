@@ -1,0 +1,108 @@
+html {
+    height: 100%;
+}
+
+body {
+    background: url('/media/background-image.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: calc(100vh - 164px);
+    color: #555;
+}
+
+/* from Bulma */
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.logo-font {
+    text-transform: uppercase;
+}
+
+.main-logo-link {
+    width: fit-content;
+}
+
+.callout {
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 35%, rgba(255,255,255,0) 100%);
+}
+
+.callout hr {
+    background: rgb(226,226,228);
+    background: linear-gradient(90deg, rgba(226,226,228,0) 0%, rgba(226,226,228,1) 50%, rgba(226,226,228,0) 100%);
+    border: none;
+    height: 5px;
+    margin: 0;
+}
+
+.callout-text {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.callout-text strong {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.shop-now-button {
+    background: #d32f2f;
+    color: white;
+    min-width: 150px;
+}
+
+.btn-black {
+    background: black;
+    color: white;
+}
+
+.btn-red {
+    background: #d32f2f;
+    color: white;
+}
+
+.shop-now-button:hover,
+.shop-now-button:active,
+.shop-now-button:focus,
+.btn-red:hover,
+.btn-red:active,
+.btn-red:focus {
+    background: white;
+    color: #d32f2f;
+    border: 1px solid #d32f2f;
+}
+
+.text-black {
+    color: #000 !important;
+}
+
+.border-black {
+    border: 1px solid black !important;
+}
+
+/* -------------------------------- Media Queries */
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 80%;
+  }
+}
+
+/* fixed top navbar only on medium and up */
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    .header-container {
+        padding-top: 164px;
+    }
+}
