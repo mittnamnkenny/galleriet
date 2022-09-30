@@ -20,6 +20,15 @@ body {
 
 .logo-font {
     text-transform: uppercase;
+    font-weight: 300;
+}
+
+.logo-font i {
+    background-color: #e53935 !important;
+    color: #fff !important;
+    border-radius: 20%;
+    margin-right: 10px;
+    padding: 10px;
 }
 
 .main-logo-link {
