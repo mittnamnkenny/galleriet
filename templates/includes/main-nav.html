@@ -22,11 +22,11 @@
                 Categories
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
-                <a href="" class="dropdown-item">Animals</a>
-                <a href="" class="dropdown-item">Flowers</a>
-                <a href="" class="dropdown-item">Landscape</a>
-                <a href="" class="dropdown-item">Portrait</a>
-                <a href="" class="dropdown-item">All Categories</a>
+                <a href="{% url 'products' %}?category=animals" class="dropdown-item">Animals</a>
+                <a href="{% url 'products' %}?category=flowers" class="dropdown-item">Flowers</a>
+                <a href="{% url 'products' %}?category=landscape" class="dropdown-item">Landscape</a>
+                <a href="{% url 'products' %}?category=portrait" class="dropdown-item">Portrait</a>
+                <a href="{% url 'products' %}?category=animals,flowers,landscape,portrait" class="dropdown-item">All Categories</a>
             </div>
         </li>
     </ul>
