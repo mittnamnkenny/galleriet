@@ -88,6 +88,10 @@ body {
     color: #000 !important;
 }
 
+.text-red {
+    color: #d32f2f !important;
+}
+
 .border-black {
     border: 1px solid black !important;
 }
