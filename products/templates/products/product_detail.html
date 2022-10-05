@@ -14,7 +14,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
-            <div class="image-container my-5">
+            <div class="image-container my-5 shadow">
                 {% if product.image %}
                 <a href="{{ product.image.url }}" target="_blank">
                     <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
@@ -27,7 +27,7 @@
             </div>
         </div>
         <div class="col-12 col-md-6 col-lg-4">
-            <div class="product-details-container mb-5 mt-md-5">
+            <div class="product-details-container mb-5 mt-md-5 bg-white p-3 rounded">
                 <p class="mb-0">{{ product.name }}</p>
                 <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
                 {% if product.category %}
@@ -37,7 +37,17 @@
                     </a>
                 </p>
                 {% endif %}
+                {% if product.artist %}
+                <p class="small mt-1 mb-0">
+                    <a class="text-muted" href="{% url 'products' %}?artist={{ product.artist }}">
+                        <i class="fas fa-user mr-1"></i>{{ product.artist }}
+                    </a>
+                </p>
+                {% endif %}
                 <p class="mt-3">{{ product.description }}</p>
+                <p>Medium: {{ product.get_medium_display | safe }}</p>
+                <p>Height: {{ product.height }}cm</p>
+                <p>Width: {{ product.width }}cm</p>
             </div>
         </div>
     </div>
