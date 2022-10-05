@@ -16,5 +16,4 @@ def add_to_bag(request, item_id):
     bag[item_id] = 1
 
     request.session['bag'] = bag
-    print(request.session['bag'])
     return redirect(redirect_url)
