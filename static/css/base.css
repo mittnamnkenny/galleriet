@@ -97,6 +97,10 @@ body {
     border: 1px solid black !important;
 }
 
+.border-grey {
+    border: 1px solid #8e8e8e !important;
+  }
+
 .bg-black {
     background: #000 !important;
 }
@@ -129,6 +133,10 @@ body {
 
 .btt-link {
     cursor: pointer;
+}
+
+.form-control:focus, .custom-select:focus {
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(142, 142, 142, 0.6) !important;
 }
 
 /* -------------------------------- Media Queries */
