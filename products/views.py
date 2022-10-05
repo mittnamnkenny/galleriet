@@ -3,7 +3,7 @@ from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
 
-from .models import Product, Category
+from .models import Product, Category, Artist
 
 
 def all_products(request):
@@ -12,6 +12,7 @@ def all_products(request):
     products = Product.objects.all()
     query = None
     categories = None
+    artists = None
     sort = None
     direction = None
 
@@ -35,6 +36,11 @@ def all_products(request):
             products = products.filter(category__name__in=categories)
             categories = Category.objects.filter(name__in=categories)
 
+        if 'artist' in request.GET:
+            artists = request.GET['artist'].split(',')
+            products = products.filter(artist__full_name__in=artists)
+            artists = Artist.objects.filter(full_name__in=artists)
+
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
@@ -52,6 +58,7 @@ def all_products(request):
         'products': products,
         'search_term': query,
         'current_categories': categories,
+        'current_artists': artists,
         'current_sorting': current_sorting,
     }
 
