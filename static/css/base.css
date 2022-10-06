@@ -71,7 +71,7 @@ body {
 .btn-red {
     background: #d32f2f;
     color: white;
-    border: 1px solid #d32f2f;
+    border: 1px solid #d32f2f !important;
 }
 
 .shop-now-button:hover,
@@ -82,7 +82,7 @@ body {
 .btn-red:focus {
     background: white;
     color: #d32f2f;
-    border: 1px solid #d32f2f;
+    border: 1px solid #d32f2f !important;
 }
 
 .text-black {
