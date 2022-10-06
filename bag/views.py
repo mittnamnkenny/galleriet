@@ -1,4 +1,5 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, HttpResponse, get_object_or_404
+from products.models import Product
 
 
 def view_bag(request):
@@ -10,6 +11,7 @@ def view_bag(request):
 def add_to_bag(request, item_id):
     """ Add a product to the shopping bag """
 
+    product = get_object_or_404(Product, pk=item_id)
     redirect_url = request.POST.get('redirect_url')
     bag = request.session.get('bag', {})
 
@@ -17,3 +19,18 @@ def add_to_bag(request, item_id):
 
     request.session['bag'] = bag
     return redirect(redirect_url)
+
+
+def remove_from_bag(request, item_id):
+    """ Remove the item from the shopping bag """
+
+    try:
+        product = get_object_or_404(Product, pk=item_id)
+        bag = request.session.get('bag', {})
+        bag.pop(item_id)
+
+        request.session['bag'] = bag
+        return HttpResponse(status=200)
+
+    except Exception as e:
+        return HttpResponse(status=500)

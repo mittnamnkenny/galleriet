@@ -30,7 +30,6 @@
                             <th scope="col">Product Info</th>
                             <th scope="col"></th>
                             <th scope="col">Price</th>
-                            <th scope="col">Subtotal</th>
                         </tr>
                     </thead>
 
@@ -46,8 +45,8 @@
                         <td class="py-3">
                             <p class="my-0">€{{ item.product.price }}</p>
                         </td>
-                        <td class="py-3">
-                            <p class="my-0">€{{ item.product.price }}</p>
+                        <td class="py-3 w-25">
+                            <a class="remove-item text-danger float-left" id="remove_{{ item.item_id }}"><small>Remove</small></a>
                         </td>
                     </tr>
                     {% endfor %}
@@ -94,4 +93,23 @@
         </div>
     </div>
 </div>
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+
+<script type="text/javascript">
+    // Remove item and reload on click
+    $('.remove-item').click(function(e) {
+        var csrfToken = "{{ csrf_token }}";
+        var itemId = $(this).attr('id').split('remove_')[1];
+        var url = `/bag/remove/${itemId}/`;
+        var data = {'csrfmiddlewaretoken': csrfToken};
+
+        $.post(url, data)
+         .done(function() {
+             location.reload();
+         });
+    })
+</script>
 {% endblock %}
