@@ -145,6 +145,10 @@ body {
     cursor: pointer;
 }
 
+.nav-item .nav-link:hover {
+    color: rgba(0, 0, 0, 0.7) !important;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */

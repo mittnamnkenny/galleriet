@@ -8,7 +8,7 @@
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-normal {% if 'products' in request.path and not 'category' in request.get_full_path %} font-weight-bold {% endif %} nav-link text-black mr-5"
+            <a class="logo-font font-weight-normal {% if 'products' in request.path and not '?category' in request.get_full_path %} font-weight-bold {% endif %} nav-link text-black mr-5"
                 href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 All Products
             </a>
@@ -20,7 +20,7 @@
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-normal {% if 'category' in request.get_full_path %} font-weight-bold {% endif %} nav-link text-black mr-5"
+            <a class="logo-font font-weight-normal {% if '?category' in request.get_full_path %} font-weight-bold {% endif %} nav-link text-black mr-5"
                 href="#" id="clothing-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Categories
             </a>
