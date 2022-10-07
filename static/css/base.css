@@ -39,9 +39,12 @@ body {
     color: rgba(0, 0, 0, 0.7) !important;
 }
 
+.dropdown .dropdown-menu {
+    margin-top: 0;
+ }
+
 .dropdown:hover .dropdown-menu {
     display: block;
-    margin-top: 0;
  }
 
  .dropdown-item:focus {
