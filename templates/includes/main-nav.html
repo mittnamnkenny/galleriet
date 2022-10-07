@@ -10,12 +10,12 @@
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-normal {% if 'products' in request.path and not '?category' in request.get_full_path %} font-weight-bold {% endif %} nav-link text-black mr-5"
                 href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                All Products
+                Products
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
+                <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
                 <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
                 <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item ">By Category</a>
-                <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
             </div>
         </li>
 
@@ -25,12 +25,12 @@
                 Categories
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
+                <a href="{% url 'products' %}?category=animals,flowers,landscape,portrait" class="dropdown-item">All
+                    Categories</a>
                 <a href="{% url 'products' %}?category=animals" class="dropdown-item">Animals</a>
                 <a href="{% url 'products' %}?category=flowers" class="dropdown-item">Flowers</a>
                 <a href="{% url 'products' %}?category=landscape" class="dropdown-item">Landscape</a>
                 <a href="{% url 'products' %}?category=portrait" class="dropdown-item">Portrait</a>
-                <a href="{% url 'products' %}?category=animals,flowers,landscape,portrait" class="dropdown-item">All
-                    Categories</a>
             </div>
         </li>
     </ul>
