@@ -1,0 +1,13 @@
+.fieldset-label {
+    position: relative;
+    right: .5rem;
+}
+
+#payment-form .form-control {
+    color: #000;
+    border: 1px solid #8e8e8e !important;
+}
+
+#payment-form .form-control:focus {
+    color: #000;
+}
