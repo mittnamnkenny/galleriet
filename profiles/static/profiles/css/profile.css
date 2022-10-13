@@ -19,3 +19,11 @@
 #id_default_country option:first-child {
     color: #aab7c4;
 }
+
+table a {
+    color: #d32f2f;
+}
+
+table a:hover {
+    color: #d32f2f;
+}
