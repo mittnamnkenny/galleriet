@@ -129,6 +129,20 @@ body {
     border: 1px solid #d32f2f !important;
 }
 
+.btn-grey {
+    background: #555;
+    color: white !important;
+    border: 1px solid #555 !important;
+}
+
+.btn-grey:hover,
+.btn-grey:active,
+.btn-grey:focus {
+    background: white;
+    color: #555 !important;
+    border: 1px solid #555 !important;
+}
+
 .text-black {
     color: #000 !important;
 }

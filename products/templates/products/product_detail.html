@@ -50,7 +50,7 @@
                 <p>Width: {{ product.width }}cm</p>
                 {% if request.user.is_superuser %}
                 <p>
-                    <a href="{% url 'edit_product' product.id %}" class="btn btn-red btn-sm"><i class="fa fa-edit"></i>
+                    <a href="{% url 'edit_product' product.id %}" class="btn btn-grey btn-sm"><i class="fa fa-edit"></i>
                         Edit</a>
                     <!-- Button trigger Product Delete modal -->
                     <button type="button" class="btn btn-red btn-sm" data-toggle="modal" data-target="#productModal"><i
@@ -91,7 +91,7 @@
                                     {% csrf_token %}
                                     <button type="submit" class="btn btn-red">Delete</button>
                                 </form>
-                                <button type="button" class="btn" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-grey" data-dismiss="modal">Close</button>
                             </div>
                         </div>
                     </div>
@@ -101,7 +101,7 @@
                     {% csrf_token %}
                     <div class="form-row">
                         <div class="col-12">
-                            <a href="{% url 'products' %}" class="btn mt-5">
+                            <a href="{% url 'products' %}" class="btn btn-grey mt-5">
                                 <span class="icon">
                                     <i class="fas fa-chevron-left"></i>
                                 </span>

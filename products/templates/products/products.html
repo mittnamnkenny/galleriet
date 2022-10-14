@@ -99,7 +99,7 @@
                                         {% if request.user.is_superuser %}
                                         <span class="float-right">
                                             <a href="{% url 'edit_product' product.id %}"
-                                                class="btn btn-red badge">Edit</a>
+                                                class="btn btn-grey badge">Edit</a>
                                             <!-- Button trigger Product Delete modal -->
                                             <button type="button" class="btn btn-red badge" data-toggle="modal"
                                                 data-target="#productModal{{ product.id }}">Delete</button>
@@ -142,7 +142,7 @@
                                                             {% csrf_token %}
                                                             <button type="submit" class="btn btn-red">Delete</button>
                                                         </form>
-                                                        <button type="button" class="btn"
+                                                        <button type="button" class="btn btn-grey"
                                                             data-dismiss="modal">Close</button>
                                                     </div>
                                                 </div>
