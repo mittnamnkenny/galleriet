@@ -48,6 +48,13 @@
                 <p>Medium: {{ product.get_medium_display | safe }}</p>
                 <p>Height: {{ product.height }}cm</p>
                 <p>Width: {{ product.width }}cm</p>
+                {% if request.user.is_superuser %}
+                <small>
+                    <a href="{% url 'edit_product' product.id %}">Edit</a>
+                    <span>&#8739;</span>
+                    <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                </small>
+                {% endif %}
                 <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
                     {% csrf_token %}
                     <div class="form-row">

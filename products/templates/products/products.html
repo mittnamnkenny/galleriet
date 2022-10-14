@@ -96,6 +96,14 @@
                                             <i class="fas fa-user mr-1"></i>{{ product.artist }}
                                         </a>
                                         {% endif %}
+                                        {% if request.user.is_superuser %}
+                                        <small class="float-right">
+                                            <a href="{% url 'edit_product' product.id %}">Edit</a>
+                                            <span>&#8739;</span>
+                                            <a class="text-danger"
+                                                href="{% url 'delete_product' product.id %}">Delete</a>
+                                        </small>
+                                        {% endif %}
                                     </p>
                                 </div>
                             </div>
