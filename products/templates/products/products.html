@@ -89,9 +89,9 @@
                                             href="{% url 'products' %}?category={{ product.category.name }}">
                                             <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
                                         </a>
-                                        <span class="mr-1">&#8739;</span>
                                         {% endif %}
                                         {% if product.artist %}
+                                        <span class="mr-1">&#8739;</span>
                                         <a class="text-muted" href="{% url 'products' %}?artist={{ product.artist }}">
                                             <i class="fas fa-user mr-1"></i>{{ product.artist }}
                                         </a>
