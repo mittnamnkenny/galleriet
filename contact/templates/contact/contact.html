@@ -21,7 +21,12 @@
     </div>
     <div class="row">
         <div class="col-12 col-lg-6">
-            <p class="text-muted">Fill out the following form to send us a message.</p>
+            <p class="text-muted">Fill out the following form to send us a message</p>
+            <form class="mt-3" action="{% url 'contact' %}" method="POST" id="contact-form">
+                {% csrf_token %}
+                {{ form|crispy }}
+                <button class="btn btn-red text-uppercase float-right">Send message</button>
+            </form>
         </div>
     </div>
     {% endblock %}
