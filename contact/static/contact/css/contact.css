@@ -1,0 +1,20 @@
+#contact-form .form-control {
+    color: #000;
+}
+
+#contact-form input::placeholder {
+    color: #aab7c4 !important;
+}
+
+#contact-form .form-control:focus {
+    box-shadow: 0 0 4px !important;
+}
+
+.fieldset-label {
+    position: relative;
+    right: .5rem;
+}
+
+.contact-form-input::placeholder {
+    color: #aab7c4 !important;
+}

@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'contact/css/contact.css' %}">
+{% endblock %}
+
 {% block page_header %}
 <div class="container header-container">
     <div class="row">
@@ -23,8 +27,11 @@
         <div class="col-12 col-lg-6">
             <p class="text-muted">Fill out the following form to send us a message</p>
             <form class="mt-3" action="{% url 'contact' %}" method="POST" id="contact-form">
-                {% csrf_token %}
-                {{ form|crispy }}
+                <fieldset class="rounded px-3 mb-5">
+                    <legend class="fieldset-label small text-black px-2 w-auto">Subject</legend>
+                    {% csrf_token %}
+                    {{ form|crispy }}
+                </fieldset>
                 <button class="btn btn-red text-uppercase float-right">Send message</button>
             </form>
         </div>
