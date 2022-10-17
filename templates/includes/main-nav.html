@@ -33,5 +33,12 @@
                 <a href="{% url 'products' %}?category=portrait" class="dropdown-item">Portrait</a>
             </div>
         </li>
+
+        <li class="nav-item">
+            <a class="logo-font font-weight-normal {% if 'contact' in request.get_full_path %} font-weight-bold {% endif %} nav-link text-black mr-5"
+                href="{% url 'contact' %}" id="contact-link">
+                Contact
+            </a>
+        </li>
     </ul>
 </div>
