@@ -126,16 +126,16 @@ body {
 }
 
 .btn-grey {
-    background: #555;
-    color: white !important;
+    background: white;
+    color: #555 !important;
     border: 1px solid #555 !important;
 }
 
 .btn-grey:hover,
 .btn-grey:active,
 .btn-grey:focus {
-    background: white;
-    color: #555 !important;
+    background: #555;
+    color: white !important;
     border: 1px solid #555 !important;
 }
 
