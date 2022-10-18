@@ -48,10 +48,12 @@
         </div>
     </li>
     <li class="list-inline-item">
-        <a class="{% if grand_total %}text-red font-weight-bold{% else %}text-black{% endif %} nav-link d-block d-lg-none"
-            href="{% url 'view_bag' %}">
+        <a class="text-black nav-link d-block d-lg-none" href="{% url 'view_bag' %}">
             <div class="text-center">
-                <div><i class="fas fa-shopping-bag fa-lg"></i></div>
+                <div class="position-relative">
+                    <i class="fas fa-shopping-bag fa-lg"></i><span
+                        class="text-white position-absolute top-0 start-100 translate-middle badge border border-light rounded-pill p-1 {% if grand_total %}bg-danger{% else %}bg-secondary{% endif %}">{{ product_count }}</span>
+                </div>
                 <p class="my-0">
                     {% if grand_total %}
                     €{{ grand_total|floatformat:2 }}

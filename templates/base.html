@@ -65,7 +65,8 @@
                         <input class="form-control border border-grey" type="text" name="q"
                             placeholder="Search our site">
                         <div class="input-group-append">
-                            <button class="form-control btn btn-red border-0" type="submit" aria-label="Search our site">
+                            <button class="form-control btn btn-red border-0" type="submit"
+                                aria-label="Search our site">
                                 <span class="icon">
                                     <i class="fas fa-search"></i>
                                 </span>
@@ -102,10 +103,12 @@
                         </div>
                     </li>
                     <li class="list-inline-item">
-                        <a class="{% if grand_total %}text-red font-weight-bold{% else %}text-black{% endif %} nav-link"
-                            href="{% url 'view_bag' %}">
+                        <a class="text-black nav-link" href="{% url 'view_bag' %}">
                             <div class="text-center">
-                                <div><i class="fas fa-shopping-bag fa-lg"></i></div>
+                                <div class="position-relative">
+                                    <i class="fas fa-shopping-bag fa-lg"></i><span
+                                        class="text-white position-absolute top-0 start-100 translate-middle badge border border-light rounded-pill p-1 {% if grand_total %}bg-danger{% else %}bg-secondary{% endif %}">{{ product_count }}</span>
+                                </div>
                                 <p class="my-0">
                                     {% if grand_total %}
                                     €{{ grand_total|floatformat:2 }}
