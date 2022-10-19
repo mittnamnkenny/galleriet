@@ -2,29 +2,162 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
     </div>
+</div>
 {% endblock %}
 
 {% block content %}
-    <div class="container h-100">
-        <div class="row h-100">
-            <div class="col col-xl-7 my-auto text-center callout">
-                <hr>
-                <h1 class="my-4 display-2 callout-text">
-                    Buy original <strong>paintings</strong> online
-                </h1>
-                <h2 class="my-4 display-5">
-                    Galleriet, Sweden
-                </h2>
-                <div class="my-5">
-                    <a href="{% url 'products' %}" class="shop-now-button btn btn-lg text-uppercase py-2">Shop Now</a>
-                </div>
-                <hr>
+<!-- Callout text -->
+<div class="container h-100 min-vh-100 callout-container">
+    <div class="row h-100">
+        <div class="col col-xl-7 my-auto text-center callout">
+            <hr>
+            <h1 class="my-4 display-2 callout-text">
+                Buy original <strong>paintings</strong> online
+            </h1>
+            <h2 class="my-4 display-5">
+                Galleriet, Sweden
+            </h2>
+            <div class="my-5">
+                <a href="{% url 'products' %}" class="shop-now-button btn btn-lg text-uppercase py-2">Shop Now</a>
             </div>
+            <hr>
         </div>
     </div>
+</div>
+
+<!-- Recent products -->
+<div class="container mb-5 recent-products">
+    <div class="row d-flex justify-content-between">
+        <div class="col">
+            <h3>Latest products</h3>
+        </div>
+        <!-- Using Indexing Syntax for Slicing, latest product -->
+        {% for product in products|slice:'0:1' %}
+        <div class="col">
+            <div class="card h-100 shadow-lg">
+                {% if product.image %}
+                <a href="{% url 'product_detail' product.id %}">
+                    <img class="card-img-top img-fluid shadow" src="{{ product.image.url }}" alt="{{ product.name }}">
+                </a>
+                {% else %}
+                <a href="{% url 'product_detail' product.id %}">
+                    <img class="card-img-top img-fluid shadow" src="{{ MEDIA_URL }}noimage.png"
+                        alt="{{ product.name }}">
+                </a>
+                {% endif %}
+                <div class="card-body pb-0">
+                    <p class="mb-0">{{ product.name }}</p>
+                </div>
+                <div class="card-footer bg-white pt-0 border-0 text-left">
+                    <div class="row">
+                        <div class="col">
+                            <p class="lead mb-0 text-right font-weight-bold">€{{ product.price }}</p>
+                            <p class="small mt-1 mb-0">
+                                {% if product.category %}
+                                <a class="text-muted mr-1"
+                                    href="{% url 'products' %}?category={{ product.category.name }}">
+                                    <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
+                                </a>
+                                {% endif %}
+                                {% if product.artist %}
+                                <span class="mr-1">&#8739;</span>
+                                <a class="text-muted" href="{% url 'products' %}?artist={{ product.artist }}">
+                                    <i class="fas fa-user mr-1"></i>{{ product.artist }}
+                                </a>
+                                {% endif %}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        <!-- Using Indexing Syntax for Slicing, second latest product -->
+        {% for product in products|slice:'1:2' %}
+        <div class="col d-none d-lg-block">
+            <div class="card h-100 shadow-lg">
+                {% if product.image %}
+                <a href="{% url 'product_detail' product.id %}">
+                    <img class="card-img-top img-fluid shadow" src="{{ product.image.url }}" alt="{{ product.name }}">
+                </a>
+                {% else %}
+                <a href="{% url 'product_detail' product.id %}">
+                    <img class="card-img-top img-fluid shadow" src="{{ MEDIA_URL }}noimage.png"
+                        alt="{{ product.name }}">
+                </a>
+                {% endif %}
+                <div class="card-body pb-0">
+                    <p class="mb-0">{{ product.name }}</p>
+                </div>
+                <div class="card-footer bg-white pt-0 border-0 text-left">
+                    <div class="row">
+                        <div class="col">
+                            <p class="lead mb-0 text-right font-weight-bold">€{{ product.price }}</p>
+                            <p class="small mt-1 mb-0">
+                                {% if product.category %}
+                                <a class="text-muted mr-1"
+                                    href="{% url 'products' %}?category={{ product.category.name }}">
+                                    <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
+                                </a>
+                                {% endif %}
+                                {% if product.artist %}
+                                <span class="mr-1">&#8739;</span>
+                                <a class="text-muted" href="{% url 'products' %}?artist={{ product.artist }}">
+                                    <i class="fas fa-user mr-1"></i>{{ product.artist }}
+                                </a>
+                                {% endif %}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        <!-- Using Indexing Syntax for Slicing, third latest product -->
+        {% for product in products|slice:'2:3' %}
+        <div class="col d-none d-xl-block">
+            <div class="card h-100 shadow-lg">
+                {% if product.image %}
+                <a href="{% url 'product_detail' product.id %}">
+                    <img class="card-img-top img-fluid shadow" src="{{ product.image.url }}" alt="{{ product.name }}">
+                </a>
+                {% else %}
+                <a href="{% url 'product_detail' product.id %}">
+                    <img class="card-img-top img-fluid shadow" src="{{ MEDIA_URL }}noimage.png"
+                        alt="{{ product.name }}">
+                </a>
+                {% endif %}
+                <div class="card-body pb-0">
+                    <p class="mb-0">{{ product.name }}</p>
+                </div>
+                <div class="card-footer bg-white pt-0 border-0 text-left">
+                    <div class="row">
+                        <div class="col">
+                            <p class="lead mb-0 text-right font-weight-bold">€{{ product.price }}</p>
+                            <p class="small mt-1 mb-0">
+                                {% if product.category %}
+                                <a class="text-muted mr-1"
+                                    href="{% url 'products' %}?category={{ product.category.name }}">
+                                    <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
+                                </a>
+                                {% endif %}
+                                {% if product.artist %}
+                                <span class="mr-1">&#8739;</span>
+                                <a class="text-muted" href="{% url 'products' %}?artist={{ product.artist }}">
+                                    <i class="fas fa-user mr-1"></i>{{ product.artist }}
+                                </a>
+                                {% endif %}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
 {% endblock %}

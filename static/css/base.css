@@ -5,6 +5,8 @@ body {
     color: #555;
 }
 
+/* -------------------------------- Navigation */
+
 /* from Bulma */
 .icon {
     align-items: center;
@@ -48,6 +50,16 @@ body {
     color: #000 !important;
  }
 
+ .bg-banner {
+    background: linear-gradient(180deg, rgba(226, 226, 228, 0.94) 0%, rgba(255, 255, 255) 100%) !important;
+}
+
+ /* -------------------------------- Callout */
+
+ .callout-container {
+    margin-top: -150px;
+ }
+
 .callout {
     background: rgb(255,255,255);
     background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 35%, rgba(255,255,255,0) 100%);
@@ -70,8 +82,14 @@ body {
     color: rgba(0, 0, 0, 0.7);
 }
 
-.bg-banner {
-    background: linear-gradient(180deg, rgba(226, 226, 228, 0.94) 0%, rgba(255, 255, 255) 100%) !important;
+ /* -------------------------------- Recent products */
+
+ .recent-products {
+    margin-top: -100px;
+}
+
+.recent-products .card {
+    width: 18rem;
 }
 
 .overlay {
@@ -96,6 +114,8 @@ body {
     box-shadow: 0 0 4px !important;
     color: #000 !important;
 }
+
+/* ------------------------------- Buttons and colours */
 
 .shop-now-button {
     background: #d32f2f;
@@ -178,6 +198,8 @@ body {
     cursor: pointer;
 }
 
+/* ------------------------------- Footer */
+
 footer {
     background: linear-gradient(180deg, rgba(198, 40, 40,1) 0%, rgba(183, 28, 28) 100%);
 }
@@ -190,7 +212,7 @@ footer .fa-g {
     padding: 10px;
 }
 
-/* Product Form */
+/* ------------------------------- Product Form */
 
 .btn-file {
     position: relative;
@@ -218,7 +240,7 @@ footer .fa-g {
     border-radius: 0;
 }
 
-/* ------------------------------- bootstrap toasts */
+/* ------------------------------- Bootstrap toasts */
 
 .message-container {
     position: fixed;
