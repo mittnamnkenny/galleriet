@@ -92,6 +92,33 @@ body {
     width: 18rem;
 }
 
+.image-container {
+    position: relative;
+}
+
+.image-new-flash {
+    position: absolute;
+    bottom: 70%;
+    min-width: 30%;
+    left: -22px;
+    background-color: #e53935;
+    padding-right: 10px;
+    border-top-left-radius: 4px;
+}
+
+/* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
+.arrow-side {
+    width: 0; 
+    height: 0; 
+    position: absolute;
+    top: 38px;
+    right: 62px;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid #ab2a28;
+    transform: rotate(-45deg);
+}
+
 .overlay {
 	height: 100%;
 	width: 100%;

@@ -39,16 +39,23 @@
         {% for product in products|slice:'0:1' %}
         <div class="col">
             <div class="card h-100 shadow-lg">
-                {% if product.image %}
-                <a href="{% url 'product_detail' product.id %}">
-                    <img class="card-img-top img-fluid shadow" src="{{ product.image.url }}" alt="{{ product.name }}">
-                </a>
-                {% else %}
-                <a href="{% url 'product_detail' product.id %}">
-                    <img class="card-img-top img-fluid shadow" src="{{ MEDIA_URL }}noimage.png"
-                        alt="{{ product.name }}">
-                </a>
-                {% endif %}
+                <div class="image-container">
+                    {% if product.image %}
+                    <a href="{% url 'product_detail' product.id %}">
+                        <img class="card-img-top img-fluid shadow" src="{{ product.image.url }}"
+                            alt="{{ product.name }}">
+                    </a>
+                    {% else %}
+                    <a href="{% url 'product_detail' product.id %}">
+                        <img class="card-img-top img-fluid shadow" src="{{ MEDIA_URL }}noimage.png"
+                            alt="{{ product.name }}">
+                    </a>
+                    {% endif %}
+                    <div class="image-new-flash shadow-lg">
+                        <span class="arrow-side"></span>
+                        <p class="text-white text-uppercase p-1 font-weight-bold text-center">new</p>
+                    </div>
+                </div>
                 <div class="card-body pb-0">
                     <p class="mb-0">{{ product.name }}</p>
                 </div>
