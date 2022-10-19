@@ -391,6 +391,13 @@ footer .fa-g {
 
 /* -------------------------------- Media Queries */
 
+/* Bootstrap xxl class */
+@media (min-width: 1400px) {
+    .d-xxl-block {
+        display: block !important;
+    }
+}
+
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
   .container {

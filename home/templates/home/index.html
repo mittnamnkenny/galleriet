@@ -126,7 +126,7 @@
         {% endfor %}
         <!-- Using Indexing Syntax for Slicing, third latest product -->
         {% for product in products|slice:'2:3' %}
-        <div class="col d-none d-xl-block">
+        <div class="col d-none d-xxl-block">
             <div class="card h-100 shadow-lg">
                 {% if product.image %}
                 <a href="{% url 'product_detail' product.id %}">
