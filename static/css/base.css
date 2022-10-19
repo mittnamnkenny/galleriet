@@ -140,6 +140,7 @@ body {
 .form-control:focus, .custom-select:focus {
     box-shadow: 0 0 4px !important;
     color: #000 !important;
+    border: 1px solid white;
 }
 
 /* ------------------------------- Buttons and colours */
