@@ -114,11 +114,11 @@
                                         </span>
                                         <!-- Product Delete Modal -->
                                         <div class="modal fade" id="productModal{{ product.id }}" tabindex="-1"
-                                            aria-labelledby="productModalLabel" aria-hidden="true">
+                                            aria-labelledby="productModalLabel{{ product.id }}" aria-hidden="true">
                                             <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                                                 <div class="modal-content">
                                                     <div class="modal-header">
-                                                        <h5 class="modal-title" id="productModalLabel">Delete product
+                                                        <h5 class="modal-title" id="productModalLabel{{ product.id }}">Delete product
                                                         </h5>
                                                         <button type="button" class="btn" data-dismiss="modal"
                                                             aria-label="Close">

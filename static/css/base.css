@@ -102,7 +102,7 @@ body {
     bottom: 70%;
     min-width: 30%;
     left: -22px;
-    background-color: #e53935;
+    background-color: #db3633;
     padding-right: 10px;
     border-top-left-radius: 4px;
 }
@@ -116,7 +116,7 @@ body {
     right: 62px;
     border-top: 15px solid transparent;
     border-bottom: 15px solid transparent;
-    border-left: 15px solid #ab2a28;
+    border-left: 15px solid #982523;
     transform: rotate(-45deg);
 }
 
