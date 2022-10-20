@@ -300,9 +300,10 @@ footer .fa-g {
 
 .message-container {
     position: fixed;
-    top: 112px;
+    top: 121px;
     right: 20px;
     z-index: 99999999999;
+    animation: SlideDown .5s ease-in forwards;
 }
 
 .custom-toast {
@@ -322,7 +323,7 @@ footer .fa-g {
     border-bottom: 10px solid black;
     position: absolute;
     top: -10px;
-    right: 40px;
+    right: 50%;
 }
 
 /* Convenience classes - colors copied from Bootstrap */
@@ -416,6 +417,19 @@ footer .fa-g {
 
 .allauth-form-inner-content a {
 	color: #d32f2f;
+}
+
+/* -------------------------------- Animations */
+
+@keyframes SlideDown {
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(10px);
+        opacity: 1;
+    }
 }
 
 /* -------------------------------- Media Queries */
