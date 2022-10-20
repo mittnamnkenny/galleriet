@@ -46,6 +46,7 @@
 </head>
 
 <body class="d-flex flex-column h-100">
+    <!-- Header -->
     <header class="container-fluid fixed-top shadow-sm {% if '/' == request.path %} shadow {% endif %}">
         <div id="delivery-banner" class="row text-center">
             <div class="col bg-banner text-black">
@@ -128,12 +129,15 @@
                     aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+                <!-- Mobile header  -->
                 {% include 'includes/mobile-top-header.html' %}
+                <!-- Main navigation  -->
                 {% include 'includes/main-nav.html' %}
             </nav>
         </div>
     </header>
 
+    <!-- Flash messages  -->
     {% if messages %}
     <div class="message-container">
         {% for message in messages %}
@@ -155,10 +159,40 @@
     {% block page_header %}
     {% endblock %}
 
-    {% block content %}
-    {% endblock %}
+    <!-- Main content -->
+    <main class="mb-5">
+        {% block content %}
+        {% endblock %}
+    </main>
 
-    <footer class="mt-auto">
+    <!-- Featurette section  -->
+    <section class="featurette mt-auto">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <i class="fas fa-palette"></i>
+                    <h3>Quality paintings</h3>
+                    <hr>
+                    <p>From the best emerging artists around the world</p>
+                </div>
+                <div class="col">
+                    <i class="fas fa-truck"></i>
+                    <h3>Safe shipping</h3>
+                    <hr>
+                    <p>Free delivery on orders over €100</p>
+                </div>
+                <div class="col">
+                    <i class="fas fa-rotate-left"></i>
+                    <h3>Return Guarantee</h3>
+                    <hr>
+                    <p>Within 14 days after delivery</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
         <div class="container">
             <div class="row">
                 <div class="col py-4">
