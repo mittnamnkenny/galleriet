@@ -86,6 +86,7 @@ body {
 
  .recent-products {
     margin-top: -100px;
+    margin-bottom: 150px !important;
 }
 
 .recent-products .card {
@@ -118,6 +119,33 @@ body {
     border-left: 15px solid #ab2a28;
     transform: rotate(-45deg);
 }
+
+ /* -------------------------------- Featurette */
+
+ .featurette {
+    margin-top: -50px;
+    text-align: center;
+    z-index: 100;
+    background-color: #F9FAFC;
+    border-top: 5px solid #E2E2E4;
+}
+
+.featurette .container {
+    color: #616161;
+    margin-top: -55px;
+}
+
+.featurette .col i {
+    color: #616161;
+    font-size: 2.5em;
+    border-radius: 50%;
+    padding: 30px;
+    background-color: #F9FAFC;
+    margin-bottom: 10px;
+    border: 5px solid #E2E2E4;
+}
+
+ /* -------------------------------- General style */
 
 .overlay {
 	height: 100%;
