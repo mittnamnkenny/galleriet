@@ -40,11 +40,6 @@
     {% endblock %}
 
     {% block extra_js %}
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $('#preloading').fadeOut('slow');
-        });
-    </script>
     {% endblock %}
 
     <title>Galleriet {% block extra_title %}{% endblock %}</title>
@@ -211,6 +206,10 @@
     {% block postloadjs %}
     <script type="text/javascript">
         $('.toast').toast('show');
+
+        $(window).ready(function () {
+            $('#preloading').fadeOut('slow');
+        });
     </script>
     {% endblock %}
 
