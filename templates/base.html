@@ -126,12 +126,15 @@
                 </ul>
             </div>
         </div>
-        <div class="row bg-white">
-            <nav class="navbar navbar-expand-lg navbar-light w-100">
+        <div class="row bg-white d-flex">
+            <nav class="navbar navbar-expand-lg navbar-light w-100 my-auto">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav"
                     aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+                <a href="{% url 'home' %}" class="nav-link main-logo-link d-block d-lg-none mx-auto">
+                    <h2 class="logo-font text-black my-0"><i class="fa-solid fa-g">|</i> <strong>Galleriet</strong></h2>
+                </a>
                 <!-- Mobile header  -->
                 {% include 'includes/mobile-top-header.html' %}
                 <!-- Main navigation  -->
