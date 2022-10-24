@@ -45,7 +45,8 @@ body {
     display: block;
  }
 
- .dropdown-item:focus {
+ .dropdown-item:focus,
+ .dropdown-item:active {
     background-color: rgba(216,216,218,1) !important;
     color: #000 !important;
  }
