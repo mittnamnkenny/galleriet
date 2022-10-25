@@ -32,12 +32,12 @@
 <!-- Recent products -->
 <div class="container mb-5 recent-products">
     <div class="row d-flex justify-content-between">
-        <div class="col">
-            <h3>Latest products</h3>
+        <div class="col d-flex justify-content-center d-lg-block">
+            <h3 class="mx-aut">Latest products</h3>
         </div>
         <!-- Using Indexing Syntax for Slicing, latest product -->
         {% for product in products|slice:'0:1' %}
-        <div class="col">
+        <div class="col d-flex justify-content-center d-lg-block">
             <div class="card h-100 shadow-lg">
                 <div class="image-container">
                     {% if product.image %}

@@ -495,8 +495,17 @@ footer .fa-g {
         font-size: 1.5em !important;
     }
 
+    .callout hr {
+        display: none;
+    }
+
     .bg-banner h4 {
-        font-size: 1.2em !important;
+        font-size: 1.1em !important;
+    }
+
+    .navbar {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
     }
 
     .nav-link h2 {
@@ -520,5 +529,10 @@ footer .fa-g {
 
     .callout h2 {
         font-size: 1.5em !important;
+    }
+
+    .bg-banner h4 {
+        font-size: 0.8em !important;
+        margin: 0 !important;
     }
 }
