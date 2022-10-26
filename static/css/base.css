@@ -270,6 +270,7 @@ body {
 
 footer {
     background: linear-gradient(180deg, rgba(198, 40, 40,1) 0%, rgba(183, 28, 28) 100%);
+    color: #fff;
 }
 
 footer .fa-g {
