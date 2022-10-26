@@ -149,13 +149,13 @@ body {
  /* -------------------------------- General style */
 
 .overlay {
-	height: 100%;
-	width: 100%;
-	top: 0;
-	left: 0;
-	position: fixed;
-	background: #e2e2e4e5;
-	z-index: -1;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: #e2e2e4e5;
+    z-index: -1;
 }
 
 .card {
@@ -399,8 +399,8 @@ footer .fa-g {
 
 .allauth-form-inner-content button,
 .allauth-form-inner-content input[type='submit'] {
-	/* btn */
-	display: inline-block;
+    /* btn */
+    display: inline-block;
     font-weight: 400;
     color: #fff;
     text-align: center;
@@ -423,13 +423,13 @@ footer .fa-g {
 
 .allauth-form-inner-content button:hover,
 .allauth-form-inner-content input[type='submit']:hover {	
-	color: #d32f2f;
+    color: #d32f2f;
     background-color: #fff;
     border-color: #d32f2f;
 }
 
 .allauth-form-inner-content a {
-	color: #d32f2f;
+    color: #d32f2f;
 }
 
 /* -------------------------------- Mailchimp */
@@ -454,17 +454,27 @@ footer .fa-g {
 }
 
 .mc-field-group input {
+    outline: none !important;
+    border: 1px solid #8e8e8e !important;
     border-radius: 4px !important;
 }
 
+.mc-field-group input:focus {
+    box-shadow: 0 0 4px !important;
+    color: #000 !important;
+    border: 1px solid white;
+}
+
 .mce_inline_error {
+    border-radius: 4px !important;
     background-color: #fff !important;
+    color: #dc3545 !important;
 }
 
 .foot button,
 .foot input[type='submit'] {
-	/* btn */
-	display: inline-block !important;
+    /* btn */
+    display: inline-block !important;
     font-weight: 400 !important;
     color: #fff !important;
     text-align: center !important;
@@ -484,7 +494,7 @@ footer .fa-g {
 
 .foot button:hover,
 .foot input[type='submit']:hover {	
-	color: #555 !important;
+    color: #555 !important;
     background-color: #fff !important;
     border-color: #555 !important;
 }
