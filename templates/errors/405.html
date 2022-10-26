@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="overlay"></div>
+<div class="container my-5 pb-5 rounded bg-white">
+    <div class="col-7 col-md-6 my-auto">
+        <h1 class="display-4 logo-font text-black">
+            Error 405: Method Not Allowed
+        </h1>
+        <div class="my-5">
+            <h4>
+                <a href="{% url 'products' %}" class="btn btn-red btn-lg text-uppercase py-3">
+                    Return to shop
+                </a>
+            </h4>
+        </div>
+    </div>
+</div>
+{% endblock %}
