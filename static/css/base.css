@@ -432,6 +432,63 @@ footer .fa-g {
 	color: #d32f2f;
 }
 
+/* -------------------------------- Mailchimp */
+
+#mc_embed_signup {
+    clear: left;
+    width: 100%;
+    max-width: 600px;
+}
+
+#mc_embed_signup form {
+    margin: 0 !important;
+}
+
+#mc_embed_signup > * {
+    color: #fff;
+}
+
+#mc_embed_signup .brandingLogo,
+#mc_embed_signup .helper_text {
+    display: none;
+}
+
+.mc-field-group input {
+    border-radius: 4px !important;
+}
+
+.mce_inline_error {
+    background-color: #fff !important;
+}
+
+.foot button,
+.foot input[type='submit'] {
+	/* btn */
+	display: inline-block !important;
+    font-weight: 400 !important;
+    color: #fff !important;
+    text-align: center !important;
+    text-transform: uppercase !important;
+    vertical-align: middle !important;
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+    background-color: #555 !important;
+    border: 1px solid #555 !important;
+    border-radius: 4px !important;
+
+    /* standard bootstrap btn transitions */
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.foot button:hover,
+.foot input[type='submit']:hover {	
+	color: #555 !important;
+    background-color: #fff !important;
+    border-color: #555 !important;
+}
+
 /* -------------------------------- Animations */
 
 @keyframes SlideDown {
