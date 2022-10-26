@@ -460,9 +460,16 @@ footer .fa-g {
 }
 
 .mc-field-group input:focus {
-    box-shadow: 0 0 4px !important;
+    box-shadow: 0 0 4px inset !important;
     color: #000 !important;
     border: 1px solid white;
+}
+
+#mc_embed_signup div.response {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 1em;
+    color: #28a745 !important;
 }
 
 .mce_inline_error {
