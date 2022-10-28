@@ -209,7 +209,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-12 col-lg-8">
+                <div class="col-12 col-lg-6">
                     <p class="h4">Subscribe to our newsletter</p>
                     <!-- Begin Mailchimp Signup Form -->
                     <div id="mc_embed_signup">
@@ -245,6 +245,15 @@
                         </form>
                     </div>
                     <!--End mc_embed_signup-->
+                    <hr class="d-block d-lg-none">
+                </div>
+                <div class="col-12 col-lg-2">
+                    <p class="h4">About</p>
+                    <ul class="list-unstyled">
+                        <li><a href="{% url 'contact' %}" class="text-white">Contact</a></li>
+                        <li><a href="{% url 'privacy_policy' %}" class="text-white">Privacy Policy</a></li>
+                    </ul>
+                    <hr class="d-block d-lg-none">
                 </div>
                 <div class="col-12 col-lg-4">
                     <p class="h4">Social</p>
@@ -253,12 +262,6 @@
                         aria-label="Visit our Facebook page (Opens in a new tab)"
                         class="btn btn-lg btn-link bg-white"><i class="fab fa-facebook-square"></i> Visit our Facebook
                         page</a>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col text-center">
-                    <hr class="d-block d-lg-none">
-                    <a href="{% url 'privacy_policy' %}" class="text-white border rounded p-1">Privacy Policy</a>
                 </div>
             </div>
             <div class="row">
