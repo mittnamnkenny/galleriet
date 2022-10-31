@@ -266,6 +266,10 @@ body {
     cursor: pointer;
 }
 
+.facebook-text {
+    color: #1565c0 !important;
+}
+
 /* ------------------------------- Footer */
 
 footer {
