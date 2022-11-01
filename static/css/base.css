@@ -85,7 +85,7 @@ body {
 
  /* -------------------------------- Recent products */
 
- .recent-products {
+.recent-products {
     margin-top: -100px;
     margin-bottom: 150px !important;
 }
@@ -539,7 +539,7 @@ footer .fa-g {
   }
 }
 
-/* fixed top navbar only on medium and up */
+/* Fixed top navbar only on medium and up */
 @media (min-width: 992px) {
     .fixed-top-desktop-only {
         position: fixed;
@@ -554,7 +554,7 @@ footer .fa-g {
     }
 }
 
-/* pad the top a bit when navbar is collapsed on mobile */
+/* Pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
     .header-container {
         padding-top: 116px;
@@ -565,7 +565,8 @@ footer .fa-g {
     }
 }
 
-@media screen and (max-width: 500px) {
+/* Mobile screen sizes */
+@media screen and (max-width: 550px) {
     .callout h1 {
         font-size: 4em !important;
     }
@@ -609,5 +610,45 @@ footer .fa-g {
     .bg-banner h4 {
         font-size: 0.8em !important;
         margin: 0 !important;
+    }
+}
+
+/* Landscape view small screen sizes */
+@media screen and (max-height: 800px) {
+    .callout h1 {
+        font-size: 2.5em !important;
+        margin-top: 100px !important;
+    }
+
+    .callout h2 {
+        font-size: 1.5em !important;
+    }
+
+    .bg-banner h4 {
+        font-size: 0.8em !important;
+        margin: 0 !important;
+    }
+
+    .navbar {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+
+    .nav-link h2 {
+        font-size: 1.5em !important;
+    }
+
+    .nav-link {
+        padding-left: 0 !important;
+    }
+
+    .nav-link .text-center > * {
+        font-size: 0.8em !important;
+    }
+}
+
+@media screen and (max-height: 500px) {
+    .recent-products {
+        margin-top: -50px !important;
     }
 }
