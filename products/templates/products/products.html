@@ -112,7 +112,8 @@
                                             <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                                                 <div class="modal-content">
                                                     <div class="modal-header">
-                                                        <h5 class="modal-title" id="productModalLabel{{ product.id }}">Delete product
+                                                        <h5 class="modal-title" id="productModalLabel{{ product.id }}">
+                                                            Delete product
                                                         </h5>
                                                         <button type="button" class="btn" data-dismiss="modal"
                                                             aria-label="Close">
@@ -179,6 +180,10 @@
                     <hr>
                 </div>
                 {% endif %}
+                {% empty %}
+                <div class="col-12">
+                    <p>Sorry, no products found.</p>
+                </div>
                 {% endfor %}
             </div>
         </div>
