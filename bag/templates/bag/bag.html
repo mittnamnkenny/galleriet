@@ -87,12 +87,12 @@
                     </tr>
                     {% endfor %}
                     <tr>
-                        <td colspan="5" class="pt-5 text-right">
+                        <td colspan="4" class="pt-5 text-right">
                             {% include "bag/bag-total.html" %}
                         </td>
                     </tr>
                     <tr>
-                        <td colspan="5" class="text-right">
+                        <td colspan="4" class="text-right">
                             {% include "bag/checkout-buttons.html" %}
                         </td>
                     </tr>
@@ -115,7 +115,7 @@
 {% block postloadjs %}
 {{ block.super }}
 
-<script type="text/javascript">
+<script>
     // Remove item and reload on click
     $('.remove-item').click(function (e) {
         var csrfToken = "{{ csrf_token }}";

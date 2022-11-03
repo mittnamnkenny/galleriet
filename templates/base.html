@@ -22,9 +22,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css"
-        integrity="sha384-/frq1SRXYH/bSyou/HUp/hib7RVN1TawQYja658FEOodR/FQBKVqT9Ol+Oz3Olq5" crossorigin="anonymous" />
+        integrity="sha384-/frq1SRXYH/bSyou/HUp/hib7RVN1TawQYja658FEOodR/FQBKVqT9Ol+Oz3Olq5" crossorigin="anonymous">
     <link href="//cdn-images.mailchimp.com/embedcode/classic-071822.css" rel="stylesheet" type="text/css">
-    <link rel="shortcut icon" href="{% static 'favicon/favicon.ico' %}" />
+    <link rel="shortcut icon" href="{% static 'favicon/favicon.ico' %}">
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
     {% endblock %}
 
@@ -281,14 +281,14 @@
 
     {% block postloadjs %}
     <!-- Flash messages -->
-    <script type="text/javascript">
+    <script>
         $('.toast').toast('show');
     </script>
 
     <!-- Mailchimp -->
-    <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'>
+    <script src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'>
     </script>
-    <script type='text/javascript'>
+    <script>
         (function ($) {
             window.fnames = new Array();
             window.ftypes = new Array();
