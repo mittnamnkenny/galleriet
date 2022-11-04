@@ -172,7 +172,7 @@ body {
     width: 100%;
 }
 
-.form-control:not[type='submit'] {
+.form-control:not([type='submit']) {
     color: #000 !important;
 }
 
