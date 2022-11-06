@@ -532,6 +532,13 @@ footer .fa-g {
     }
 }
 
+/* Slightly smaller callout font size on laptop */
+@media screen and (max-width: 1300px) {
+    .callout h1 {
+        font-size: 4.5em !important;
+    }
+}
+
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
   .container {
