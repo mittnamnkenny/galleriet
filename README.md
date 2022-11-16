@@ -112,3 +112,387 @@ For more information: [View the Kanban Board here.](https://github.com/users/mit
       - As a **Site User** I am **presented with a link to mittnamnkenny’s GitHub** so that **I can view more repositories**
     - US26. 404 page:
       - As a **Site User** I am **presented with a custom 404 page when trying to access a URL that does not exist** so that **I can get an proper error page and easily return to the home page**
+
+## Features
+
+### Existing Features
+
+#### Header:
+
+The header is present on all pages of the site. It uses bootstrap's built-in class fixed-top, so when the user scrolls, it will remain fixed to the top of the browser's viewport and always visible to the user.
+
+On the left-hand side of the header the user is presented with the logo; Galleriet with a styled Font Awesome icon (fa-solid fa-g), which when clicked will redirect the user to the home page. On mobile devices, the logo is centered.
+
+![Header](documentation/features-header.png)
+
+The main navigation is featured in the header with the following links to: Home, Products, Categories, and Contact. Using request path and highlighting the current page in bold text.
+
+My account and the Shopping bag is always visible to the user. The shopping bag will display the number of products added and the total price, automatically updating when new products added. Depending on your login status, the following links can be accessed using a drop-down menu under My account:
+
+  - Not logged in: Register, Login
+  - Logged in: My Profile, Logout and (if superuser) Product management
+
+![Header Account](documentation/features-headeraccount.png)
+
+The header also features a search bar that allows the user to search for products and a delivery banner displaying the free delivery message. 
+
+The header is fully responsive, so when on smaller devices the header will collapse and the main navigation links are accessed using a ”hamburger menu”.
+
+<details>
+<summary>View collapsed navbar:</summary>
+
+![Header Collapse](documentation/features-headercollapse.png)
+</details>
+
+#### Home page:
+
+##### Home page - Callout:
+
+Positioned at the top of the home page, this is first presented to the user as they visit the site. It includes a background image featuring an abstract painting photo.
+
+![Callout](documentation/features-callout.png)
+
+A large text overlay; Buy original paintings online Galleriet, Sweden with an included link that will redirect the user to the products page.
+
+On smaller screen sizes a dark background colour is positioned above the image so the text will stand out more and be easier to read. The text is also centered.
+
+![Callout Small](documentation/features-calloutsmall.png)
+
+When the user visits the site for the first time, they will clearly see that this site is selling paintings.
+
+##### Home page - Latest products:
+
+Positioned below the callout, the user can view the most recent products available for purchase. This is featured on the home page so that the user can quickly see any product updates.
+
+The user can view the latest products with information including: Product image, name, price, category, and artist.
+
+![Latest Products](documentation/features-latestproducts.png)
+
+By clicking on the product image, the user is redirected to the product detail page. The user can also click on the artist name or category to find matching products.
+
+#### Products page:
+
+The Products page will present a paginated list of all products on the site, limited to a maximum of eight products per page. The Products page can easily be accessed using the provided link on the Home page or in the main navigation; Products and Categories, alternatively by searching for a product name or description using the search bar.
+
+The user will be able to view the number of products and sort products by price, name or category using the included drop-down field; Sort by.
+
+![Products](documentation/features-products.png)
+
+Category buttons will be presented at the top of the page when the user chooses Categories in the main navigation. This will allow the user to easily switch between certain categories.
+
+![Products Small](documentation/features-productssmall.png)
+
+For each product the following information is presented to the user: Product image, name, price, category, and artist.
+
+By clicking on the product image, the user is redirected to the product detail page. The user can also click on the artist name or category to find matching products.
+
+#### Product detail page:
+
+When a user chooses to click on a product, they are brought to the Product detail page. The user is shown the entirety of the product. The following information will be presented to the user: Product image, name, price, category, artist, description, medium, height and, width.
+
+![Product Details](documentation/features-productdetails.png)
+
+The user will be able to add the product to the shopping bag or return to the Products page using the clearly labeled buttons. The user can also click on the artist name or category to find matching products.
+
+
+#### Shopping bag:
+
+A user can easily access the Shopping bag by clicking on the shopping bag icon in the header section or when adding a new product using the; Go to secure checkout button in the success message displayed to the user.
+
+On the Shopping bag page the user is presented with a summary of all products added for purchase and the grand total price. As new products are added to the shopping bag, the grand total is automatically updated, taking into consideration any delivery costs.
+
+![Shoppingbag](documentation/features-shoppingbag.png)
+
+The user will be able to remove unwanted products from their shopping bag by clicking on Remove, before proceeding to the checkout page.
+
+From this page the user can also choose to return to the Products page by clicking on the Keep shopping button.
+
+<details>
+<summary>Shopping bag on mobile devices:</summary>
+
+![Shoppingbag Small](documentation/features-shoppingbagsmall.png)
+</details>
+
+#### Checkout page:
+
+When a user clicks on Secure checkout on the Shopping bag page, the user is redirected to the Checkout page; this is the last step before completing a purchase. On the Checkout page the user is presented with an Order Summary and the user is required to enter their details, delivery information and payment credit card number. 
+
+The option to Save this delivery information to my profile is presented to logged-in users; this allows the delivery form fields to be pre-populated on future purchases, which results in a faster checkout process.
+
+From this page the user can also choose to return to the Shopping bag page by clicking on the Adjust bag button.
+
+![Checkout](documentation/features-checkout.png)
+
+<details>
+<summary>Checkout page on mobile devices:</summary>
+
+![Checkout Small](documentation/features-checkoutsmall.png)
+</details>
+
+All payments are handled by Stripe online payment processing system, and webhooks are implemented to ensure that all transactions are handled correctly in case of any problems during the payment process.
+
+**Stripe test card:**
+  - test card number 4242 4242 4242 4242, 
+  - a random three-digit CVC number, 
+  - and any expiration date in the future.
+
+Please note: The website is for educational purposes only and uses Stripe test mode to simulate payments.
+
+Stripe events example:
+
+![Stripe Events](documentation/features-stripe.png)
+
+Stripe webhooks example:
+
+![Stripe Webhooks](documentation/features-stripewh.png)
+
+#### Checkout success page:
+
+The user is redirected to the Checkout success page when a purchase is completed, here the user is presented with a confirmation message and order information.
+
+![Checkout Success](documentation/features-checkoutsuccess.png)
+
+The user will receive an order confirmation email.
+
+temp-mail.org was used when completing this purchase:
+
+![Checkout Mail](documentation/features-checkoutsuccessmail.png)
+
+#### Profile page:
+
+A user can easily access the Profile page from the header section using the drop-down menu under my account name. It is required that the user is registered and logged in.
+
+The Profile page contains the users Default Delivery Information. A user can easily update their details by changing the pre-populated form fields and clicking on the Update Information button.
+
+Order history is also presented to the user, here the user can view all their past orders and will be able to click on order number and check individual orders for full order information.
+
+![Profile](documentation/features-profile.png)
+
+<details>
+<summary>Profile page on mobile devices:</summary>
+
+![Profile Small](documentation/features-profilesmall.png)
+</details>
+
+#### Register / Sign up page:
+
+Unregistered users will be able to access the Register page by navigating to the header section and using the drop-down menu under My account. A new account can easily be created on the register page; the user needs to provide the following information: email, username and password.
+
+![Register](documentation/features-register.png)
+
+The user is required to verify their email address after clicking on the Sign up button; an email will be automatically sent to the users email address.
+
+![Register Verify](documentation/features-registerverify.png)
+
+temp-mail.org was used when registering this user:
+
+![Register Mail](documentation/features-registermail.png)
+
+Confirm Email address:
+
+![Register Confirm](documentation/features-registerconfirm.png)
+
+#### Login / Sign in page:
+
+When a user has completed the registration process, they can easily login to the site using the Sign in page. The Sign in page can be accessed in the header section using the drop-down menu under My account. To login the user is required to enter their username or email and the correct password.
+
+![Login](documentation/features-login.png)
+
+A user can also reset their password in case they forget it, using the link Forgot Password?
+
+![Login Reset](documentation/features-loginreset.png)
+
+After clicking on Reset my password:
+
+![Login Resetmail](documentation/features-loginresetmail.png)
+
+temp-mail.org was used when resetting the password for this user:
+
+![Login Mail](documentation/features-loginmail.png)
+
+Enter new password:
+
+![Login Change](documentation/features-loginchange.png)
+
+Password change confirmation:
+
+![Login Changed](documentation/features-loginchanged.png)
+
+#### Logout / Sign out page:
+
+The Sign out page can be accessed in the header section using the drop-down menu under My account name.
+
+The user will have to confirm before singing out. When the user clicks on Sign out, they are directly logged out of their account and redirected to the Home page. If the user chooses to click the Cancel button instead, the user will be redirected to the Home page.
+
+![Logout](documentation/features-logout.png)
+
+#### Contact page:
+
+The Contact page allows a user to send a message to a site administrator directly from the site using the contact form. The user is required to enter their name, email and message. The user is also able to choose a subject; Customer service (default) or Technical assistance.
+
+The Contact page can be accessed using the provided link in the main navigation header or at the bottom of the page in the footer section. 
+
+![Contact](documentation/features-contact.png)
+
+#### Django Admin page:
+
+To manage the site, a superuser account was created. The Admin page can be accessed by logging in to the /admin URL with the superuser account. From the admin panel, the superuser will have full control, and be able to manage all products on the site, view any new contact inquiries, etc.
+
+![Admin](documentation/features-admin.png)
+
+#### Product management:
+
+For full CRUD functionality, the superuser can Create, Update, and Delete products directly from the site to manage products available for purchase. Any changes made on the site will be directly reflected to the user without having to use the Django admin panel.
+
+##### Add product:
+
+The Product management / Add product page can be accessed in the header section using the drop-down menu under My account name. The superuser will be able to add a new product to the site by filling in the Add a product form. If no image is selected here, a placeholder image will be displayed instead.
+
+![Management Add](documentation/features-managementadd.png)
+
+##### Edit product:
+
+If the superuser wants to edit a specific product the Edit product page can be accessed using the Edit button on the Products or Product detail page. On the Edit a product page, the superuser will be able to update all product information including the image.
+
+Products (superuser):
+
+![Management](documentation/features-management.png)
+
+Product detail (superuser):
+
+![Management Detail](documentation/features-managementdetail.png)
+
+Edit product:
+
+![Management Edit](documentation/features-managementedit.png)
+
+##### Delete product:
+
+The Delete button is also displayed on the Products and Product detail page for each product.
+If the superuser wants to delete a specific product they will have to confirm the deletion before the product is removed; a pop-up modal is displayed to the superuser with the option to Delete or Close.
+
+Delete product modal:
+
+![Management Delete](documentation/features-managementdelete.png)
+
+#### System Messages:
+
+System / Flash messages are present throughout the site and will be displayed to the user as feedback. The message will appear at the top right of the screen when certain actions are completed and can easily be removed by manually clicking on the close x button.
+
+System message when product added to bag:
+
+![Message Add](documentation/features-messageadd.png)
+
+Alert message:
+
+![Message Alert](documentation/features-messagealert.png)
+
+#### Featurette:
+
+Positioned above the footer, the user is presented with three styled Font Awesome icons with text included; this will help the user to identify the purpose of the site and some of it’s features. The featurette is available on all pages of the site; on smaller devices the number of icons is reduced to two.
+
+![Featurette](documentation/features-featurette.png)
+
+#### Footer:
+
+The Footer is present on all pages of the site, featured at the absolute bottom. The footer contains links to Galleriet’s Facebook page, mittnamnkenny’s GitHub page, the Contact page, and the Privacy policy page. All External links open in a new tab.
+
+An embedded Mailchimp newsletter form is also available in the footer. This will encourage users to subscribe to Galleriet’s newsletter.
+
+![Footer](documentation/features-footer.png)
+
+<details>
+<summary>Footer on mobile devices:</summary>
+
+![Footer Small](documentation/features-footersmall.png)
+</details>
+
+#### Web marketing:
+
+##### Newsletter:
+
+A user will be able to subscribe to Galleriet’s newsletter. The user is required to enter their email address and click on the Subscribe button to sign up. This will automatically add their email address to Galleriet’s subscription list. Newsletters can be sent out when new products are added to the store, as a part of the web marketing strategy for this project.
+
+This service is handled by MailChimp.
+
+[Mailchimp Website.](https://mailchimp.com/)
+
+MailChimp Audience:
+
+![Mailchimp](documentation/features-mailchimp.png)
+
+##### Facebook business page:
+
+A Facebook business page was created for the purpose of web marketing. The footer contains a link to Galleriet’s Facebook page; Visit our Facebook page; this link will open in a new tab.
+
+[Galleriet’s Facebook page.](https://www.facebook.com/people/Galleriet/100086925295277/)
+
+Screenshot Galleriet’s Facebook page:
+
+![Facebook](documentation/features-facebook.png)
+
+#### Privacy Policy:
+
+A Privacy policy page was created and can be accessed by the link in the footer. The Privacy policy will show the user that this site is trustworthy and that Galleriet takes privacy seriously.
+
+The privacy policy was created using:
+
+[Privacy Policy Generator.](https://www.privacypolicygenerator.info/)
+
+![Privacy](documentation/features-privacy.png)
+
+#### SEO:
+
+To increase brand reach and make the site search-engine friendly, the following Search Engine Optimization (SEO) techniques were used:
+
+##### Keyword research:
+
+Keywords and phrases were identified using the site [Wordtracker](https://www.wordtracker.com/). I have also used the auto-complete feature of Google to get keyword ideas for my project.
+
+A list of relevant keywords for my project: gallery, paintings, paintings online, artists, art, unique art, original paintings, art store.
+
+I have used the following Keywords:
+
+Home Callout h1: Buy original <strong>paintings</strong> online
+Featurette h3: Quality paintings
+Featurette p: From the best emerging artists around the world
+Footer p: Keep up to date with all our latest paintings
+Title tag: Galleriet - Buy original paintings online
+Meta description: Galleriet, Buy original paintings online
+Meta keywords: galleriet, gallery, paintings, paintings online, artists, art, unique art, original paintings, art store
+
+Images on the site have descriptive alternative text 
+
+A sitemap.xml file was created to allow search engine bot crawling
+
+A robots.txt file was created to control search engine bot crawling
+
+#### Additional features:
+
+Favicon.
+
+![Favicon](documentation/features-favicon.png)
+
+Most links and buttons will change colour when hovered over.
+
+![Buttons](documentation/features-buttons.png)
+
+404 response page.
+
+![Error](documentation/features-error.png)
+
+### Features that could be implemented in the future:
+
+#### Product inventory:
+
+This website is for educational purposes only, and currently a user will be able to purchase the same painting multiple times without it being removed from the list of available products.
+This will guarantee that products are always available for test purchase to the user.
+
+To solve this the following could be done in the future:
+
+In the products app:
+Update the product model and add a new field named available (IntegerField), that defaults to 1.
+Update the all_products view to filter Product by available=1 instead of all.
+
+In the checkout app:
+Update the checkout view to first check if product is still available for purchase and when order form is valid, set product available to 0 and save.
