@@ -453,13 +453,13 @@ A list of relevant keywords for my project: gallery, paintings, paintings online
 
 I have used the following Keywords:
 
-Home Callout h1: Buy original <strong>paintings</strong> online
-Featurette h3: Quality paintings
-Featurette p: From the best emerging artists around the world
-Footer p: Keep up to date with all our latest paintings
-Title tag: Galleriet - Buy original paintings online
-Meta description: Galleriet, Buy original paintings online
-Meta keywords: galleriet, gallery, paintings, paintings online, artists, art, unique art, original paintings, art store
+  - Home Callout h1: Buy original <strong>paintings</strong> online
+  - Featurette h3: Quality paintings
+  - Featurette p: From the best emerging artists around the world
+  - Footer p: Keep up to date with all our latest paintings
+  - Title tag: Galleriet - Buy original paintings online
+  - Meta description: Galleriet, Buy original paintings online
+  - Meta keywords: galleriet, gallery, paintings, paintings online, artists, art, unique art, original paintings, art store
 
 Images on the site have descriptive alternative text 
 
@@ -496,3 +496,160 @@ Update the all_products view to filter Product by available=1 instead of all.
 
 In the checkout app:
 Update the checkout view to first check if product is still available for purchase and when order form is valid, set product available to 0 and save.
+
+## Design
+
+### Wireframes
+
+At the beginning of this project and as a part of the planning phase wireframes were created using [Balsamiq](https://balsamiq.com/). The wireframes were used to get a basic idea on how the site might look when finished, both on desktop and mobile devices.
+
+Wireframes were created for the following pages and features:
+
+#### Home page:
+
+![Wireframes Home](documentation/wireframes-home.png)
+
+#### Products page:
+
+![Wireframes Products](documentation/wireframes-products.png)
+
+#### Product detail page:
+
+![Wireframes Detail](documentation/wireframes-productdetail.png)
+
+#### Shopping bag:
+
+![Wireframes Bag](documentation/wireframes-shoppingbag.png)
+
+#### Checkout page:
+
+![Wireframes Checkout](documentation/wireframes-checkout.png)
+
+#### Profile page:
+
+![Wireframes Profile](documentation/wireframes-profile.png)
+
+#### Contact page:
+
+![Wireframes Contact](documentation/wireframes-contact.png)
+
+#### Mobile devices:
+
+![Wireframes Mobile](documentation/wireframes-mobile.png)
+
+### Data Model
+
+This project is hosted on [Heroku](https://www.heroku.com/) and the database used is Heroku PostgreSQL. 
+[Amazon Web Services (AWS)](https://aws.amazon.com) is used to store all static files and images. 
+This project is based on Code Institute's walkthrough project Boutique Ado, Building an E-Commerce Platform. 
+
+Four custom models were created for this project; Product, Artist, Contact and OrderLineItem.
+
+Entity Relationship Diagram - Product:
+
+![ERD Product](documentation/erd-product.png)
+
+Entity Relationship Diagram - Artist:
+
+![ERD Artist](documentation/erd-artist.png)
+
+Entity Relationship Diagram - Contact:
+
+![ERD Contact](documentation/erd-contact.png)
+
+Entity Relationship Diagram - OrderLineItem:
+
+![ERD OrderLineItem](documentation/erd-orderlineitem.png)
+
+### Site map
+
+To explain the structure of the site and how to navigate it, I created a site map using [Lucidchart](https://www.lucidchart.com/pages/):
+
+![Site Map](documentation/site-map.png)
+
+### Colours
+
+To match the background image featuring an abstract painting photo, red was chosen as the main colour to use throughout the site. The idea is to create a minimalist look and with a different colour scheme compared to my previous projects with Code Institute. [Google Materialize](https://materializecss.com/color.html) color palette was used to select the hex colour codes.
+
+With a focus on accessibility and contrast, the following main colours were chosen:
+
+![Design Palette](documentation/design-palette.png)
+
+### Typography
+
+I have used font-family "Helvetica Neue", Helvetica, Arial, sans-serif for all of the text throughout the site. This is Bootstrap's default font, and this was chosen because it both looks good and is easy to read.
+
+To make text catch the users attention and improve SEO, strong tags were used in the callout header.
+
+### Imagery
+
+Background image used in this project:
+
+  - [Unsplash:](https://unsplash.com/photos/0YZekL_Kp2E) Abstract painting photo, Steve Johnson
+
+Photoshop was used to adjust the brightness and add a gradient overlay, this will make the callout text stand out and more visible to the user.
+
+All product images used in this project are real paintings created by mittnamnkenny’s family and friend. mittnamnkenny have full permission to use their paintings in this project.
+
+  - [Tomas K:](https://galleri.black/flyfishing/) Tomas K Galleri
+
+## Technologies Used
+
+### Languages Used:
+
+  - HTML5
+  - CSS3
+  - JavaScript
+  - Python
+
+### Python packages Used:
+
+    asgiref==3.5.2
+    boto3==1.24.96
+    botocore==1.27.96
+    dj-database-url==0.5.0
+    Django==3.2
+    django-allauth==0.41.0
+    django-countries==7.2.1
+    django-crispy-forms==1.14.0
+    django-storages==1.9.1
+    gunicorn==20.0.4
+    jmespath==1.0.1
+    oauthlib==3.2.1
+    Pillow==9.2.0
+    psycopg2-binary==2.8.6
+    python3-openid==3.2.0
+    pytz==2022.2.1
+    requests-oauthlib==1.3.1
+    s3transfer==0.6.0
+    sqlparse==0.4.3
+    stripe==4.2.0
+
+### Frameworks, Libraries and Software Used:
+
+  - [Am I Responsive:](http://ami.responsivedesign.is) Checking the responsive.
+  - [Amazon Web Services (AWS)](https://aws.amazon.com) Used to store all static files and images.
+  - [Balsamiq:](https://balsamiq.com/) Used to create the wireframes.  
+  - [Bootstrap:](https://getbootstrap.com/) Bootstrap CSS Framework used for styling and to build responsive web pages.
+  - [Chrome DevTools:](https://developer.chrome.com/docs/devtools/) Used to test the response on different screen sizes, debugging and to generate a Lighthouse report to analyze page load.  
+  - [Django:](https://www.djangoproject.com/) Main Python framework used in the development.
+  - [Font Awesome:](https://fontawesome.com/) Used throughout the site to add icons for aesthetic and UX purposes.
+  - [Git:](https://git-scm.com/) Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
+  - [GitHub:](https://github.com/) GitHub is used to store the projects code after being pushed from Git and to create the Kanban board used for this project.
+  - [Gmail:](https://www.google.com/intl/sv/gmail/about/) Galleriet's main mail account.
+  - [Heroku:](https://www.heroku.com/) For deployment and hosting of the application.
+  - [Heroku PostgreSQL:](https://www.heroku.com/postgres) The database used for this application.
+  - [HTML Validator:](https://validator.w3.org/) Check your code for HTML validation.
+  - [JSHint:](https://jshint.com/) Check code for JavaScript validation.
+  - [jQuery:](https://jquery.com/) JavaScript library.  
+  - [Lucidchart:](https://www.lucidchart.com/pages/) Used to create the site map.
+  - [Mailchimp:](https://mailchimp.com/) Newsletter service.
+  - [Materialize Colors:](https://materializecss.com/color.html) Used to create the main colour palette.
+  - [Photoshop:](https://www.adobe.com/se/products/photoshop.html) Used to customize the callout image, adjust brightness and add gradient overlay.
+  - [Stripe:](https://stripe.com/se) Online payment processing system.
+  - [Temp Mail:](https://temp-mail.org/en/) Used for account registration, newsletter sign up and test purchases.
+  - [Tiny PNG:](https://tinypng.com/) Compressing images to smaller sizes.
+  - [Unsplash:](https://unsplash.com/photos/0YZekL_Kp2E) Abstract painting photo, Steve Johnson
+  - [W3 CSS Validator:](https://jigsaw.w3.org/css-validator/) Check your code for CSS validation.
+  - [Writer:](https://writer.com/grammar-checker/) Free Grammar Check.
+
