@@ -653,3 +653,559 @@ All product images used in this project are real paintings created by mittnamnke
   - [W3 CSS Validator:](https://jigsaw.w3.org/css-validator/) Check your code for CSS validation.
   - [Writer:](https://writer.com/grammar-checker/) Free Grammar Check.
 
+## Testing
+
+### Browser Testing
+
+I have tested that this application works using Macbook Air (Retina, 13-inch, 2018), with macOS Ventura 13.0.1 installed, using the following browsers:
+
+  - Safari Version 16.1
+  - Google Chrome Version 107.0.5304.110 
+  - Firefox Browser 106.0.5
+
+I have tested this application works on the following iOS devices using Safari Version 16.1 browser:
+
+  - iPhone X, with iOS 16.1.1 installed
+  - iPad Air 3, with iPadOS 16.1.1 installed
+
+### Responsiveness
+
+Chrome developer tool have been used to check the responsiveness.
+
+  - I have tested that this application works on different screen sizes from iPhone 5 (320px wide) and very large screens like 5K iMac Pro (5120 x 2880 px).
+
+### Validator Testing
+
+The W3C Markup Validator were used to validate the HTML on all pages of the project to ensure there were no syntax errors in there. To validate the HTML files all Django template tags were manually removed with the HTML code copied and inserted to the base template.
+
+Index page:
+
+![HTML Index](documentation/testing/htmlchecker-index.png)
+
+Products page:
+
+![HTML Products](documentation/testing/htmlchecker-products.png)
+
+Product detail page:
+
+![HTML Detail](documentation/testing/htmlchecker-productdetail.png)
+
+Shopping bag:
+
+![HTML Bag](documentation/testing/htmlchecker-bag.png)
+
+Checkout page:
+
+![HTML Checkout](documentation/testing/htmlchecker-checkout.png)
+
+Checkout success page:
+
+![HTML Success](documentation/testing/htmlchecker-checkoutsuccess.png)
+
+Profile page:
+
+![HTML Profile](documentation/testing/htmlchecker-profile.png)
+
+Register / Sign up page:
+
+![HTML Register](documentation/testing/htmlchecker-signup.png)
+
+Login / Sign in page:
+
+![HTML Login](documentation/testing/htmlchecker-login.png)
+
+Logout / Sign out page:
+
+![HTML Logout](documentation/testing/htmlchecker-logout.png)
+
+Contact page:
+
+![HTML Contact](documentation/testing/htmlchecker-contact.png)
+
+Add product page:
+
+![HTML Add](documentation/testing/htmlchecker-addproduct.png)
+
+Edit product page:
+
+![HTML Edit](documentation/testing/htmlchecker-editproduct.png)
+
+Privacy policy page:
+
+![HTML Privacy](documentation/testing/htmlchecker-privacypolicy.png)
+
+404 page:
+
+![HTML 404](documentation/testing/htmlchecker-404.png)
+
+#### W3C CSS Validator:
+
+The W3C CSS Validator Services were used to validate the CSS to ensure there were no errors in there.
+
+![W3C CSS](documentation/testing/w3ccssvalidator.png)
+
+#### JSHint:
+
+JSHint was used to validate the JavaScript with no errors highlighted.
+
+Bag JS:
+
+![JSHint Bag](documentation/testing/jshint-bag.png)
+
+Countryfield JS:
+
+![JSHint Countryfield](documentation/testing/jshint-countryfield.png)
+
+Product JS:
+
+![JSHint product](documentation/testing/jshint-product.png)
+
+Stripeelements JS:
+
+![JSHint stripeelements](documentation/testing/jshint-stripeelements.png)
+
+#### Python Validation:
+
+To validate Python files the following command was used: python3 -m flake8.
+Flake8 will inspects code for errors, including failing to comply with PEP8 standards. No serious errors listed on all files tested:
+
+![Flake8](documentation/testing/flake8.png)
+
+#### Lighthouse:
+
+I have confirmed that the colours and fonts chosen are easy to read and accessible by running it through lighthouse in Chrome developer tools on the following pages:
+
+Home page:
+
+![Lighthouse Home](documentation/testing/lighthouse-home.png)
+
+Products page:
+
+![Lighthouse Products](documentation/testing/lighthouse-products.png)
+
+Product detail page:
+
+![Lighthouse Detail](documentation/testing/lighthouse-productdetail.png)
+
+Shopping bag:
+
+![Lighthouse Bag](documentation/testing/lighthouse-bag.png)
+
+Checkout page:
+
+![Lighthouse Checkout](documentation/testing/lighthouse-checkout.png)
+
+Checkout success page:
+
+![Lighthouse Success](documentation/testing/lighthouse-checkoutsuccess.png)
+
+Profile page:
+
+![Lighthouse Profile](documentation/testing/lighthouse-profile.png)
+
+Register / Sign up page:
+
+![Lighthouse Register](documentation/testing/lighthouse-signup.png)
+
+Login / Sign in page:
+
+![Lighthouse Login](documentation/testing/lighthouse-login.png)
+
+Logout / Sign out page:
+
+![Lighthouse Logout](documentation/testing/lighthouse-logout.png)
+
+Contact page:
+
+![Lighthouse Contact](documentation/testing/lighthouse-contact.png)
+
+Add product page:
+
+![Lighthouse Add](documentation/testing/lighthouse-addproduct.png)
+
+Edit product page:
+
+![Lighthouse Edit](documentation/testing/lighthouse-editproduct.png)
+
+Privacy policy page:
+
+![Lighthouse Privacy](documentation/testing/lighthouse-privacypolicy.png)
+
+### User Stories testing
+
+To further ensure this application is working correctly and functions as expected, manual testing was performed. User Stories were tested successfully to verify that all acceptance criteria was met. 
+
+
+  - US1. Add products:
+    - As a **Site Admin** I can **add products directly from the site** so that **I can add new items to my store**
+
+    - Acceptance Criteria:
+      - Site admin can add products directly from the site
+      - Site admin can upload a product image
+
+    - I have tested:
+      - Adding products directly from the site using the superuser account.
+      - That the add product page is restricted to superuser only. With the following response: Sorry, only store owners can do that.
+      - That a superuser can select a product image to upload and if none is provided a placeholder image is displayed instead.
+
+
+  - US2. Update products:
+    - As a **Site Admin** I can **update products directly from the site** so that **I can change product prices, descriptions, images, and other product criteria**
+
+    - Acceptance Criteria:
+      - Site admin can update products directly from the site
+      - Site admin can upload and update a product image
+
+    - I have tested:
+      - That the Edit link on the products and product detail page will redirect the superuser to the edit a product page.
+      - That the correct product information is displayed and that all fields are loaded pre-populated on the edit a product page
+      - Updating a product and image on the edit a product page works as expected.
+      - That the edit a product page and links to access it, is restricted to superuser only.
+
+  - US3. Delete products:
+    - As a **Site Admin** I can **delete products directly from the site** so that **I remove items that are no longer for sale**
+
+    - Acceptance Criteria:
+      - Site admin can delete products directly from the site
+      - Site admin should have to confirm before deleting a product
+    
+    - I have tested:
+      - That the delete link on the products and product detail page will display the delete modal with correct product information to the superuser.
+      - That the delete button in the modal and that deleting a product works as expected.
+      - That the delete a product modal and links to access it, is restricted to superuser only.
+
+  - US4. Account registration:
+    - As a **Site User** I can **register an account** so that **I can have a personal account and be able to view my profile**
+
+    - Acceptance Criteria:
+      - To register a user must enter username, email and password
+      - User should not be able to register the same username more than once
+    
+    - I have tested:
+      - That username, email and password is required.
+      - That registering with an already created username will generate the following response: A user with that username already exists. I will not be able to register the same username more than once.
+
+  - US5. Login/Logout:
+    - As a **Site User** I can **login or logout** so that **I can access my personal account information**
+
+    - Acceptance Criteria:
+      - To login a user must enter correct username (or email) and password
+      - User should have to confirm before logging out of their account
+
+    - I have tested:
+      - That a user can login with their username of email, and that correct password is required.
+      - That the user is presented with a sign out page with the following text: Are you sure you want to sign out?
+      - That a user can sign out with the included sign out link.
+
+  - US6. Password reset:
+    - As a **Site User** I can **easily reset my password in case I forget it** so that **I can recover access to my account**
+
+    - Acceptance Criteria:
+      - A Forgot password link should be available on the login page
+      - User should have to enter their registered email address
+      - User should receive an password reset email
+
+    - I have tested:
+      - That a user is required to enter a correct email adress assigned to any user account.
+      - That a user will ba able to reset their password using the forgot password link on the sign in page. Temp mail was used to test the reset password feature.
+
+  - US7. Personalized profile:
+    - As a **Site User** I can **have a personalized profile** so that **I can view my personal order history and order confirmations, and save my payment information**
+
+    - Acceptance Criteria:
+      - My Profile link is easily accessible to the user
+      - User should be able to update and save their default delivery information
+      - User should be able to view their order history
+
+    - I have tested:
+      - That signed in users are presented with the my profile link in the header section under my account name and that the link works as expected.
+      - That the default delivery information form will display the correct information to the user and that all form fields are loaded pre-populated if previously saved.
+      - That a user can update their default delivery information using the update information link.
+      - That order history is displayed to the user and that the user can click on order number for full order information.
+
+  - US8. View products:
+    - As a **Site Shopper** I can **view a list of products** so that **I can select some to purchase**
+
+    - Acceptance Criteria:
+      - User is presented with a list of products for sale
+      - Correct image and information for each product
+
+    - I have tested:
+      - That all products are presented on the products page and if the number of total products exceeds eight, a paginated view is presented to the user.
+      - That the correct information is presented to the user for each product.
+      - That the Next and Prev links work as expected.
+
+  - US9. Product detail:
+    - As a **Site Shopper** I can **view individual product details** so that **I can identify the price, description, product image etc**
+
+    - Acceptance Criteria:
+      - User should be able to click on a product for full information
+      - Correct image and information is presented to the user
+
+    - I have tested:
+      - That all products on the products and home page can be clicked and opened for full detail view.  
+      - That the correct information is presented to the user.
+
+  - US10. View total:
+    - As a **Site Shopper** I can **easily view the total of my purchase at any time** so that **I can avoid spending too much**
+
+    - Acceptance Criteria:
+      - Grand Total is always visible to the user
+      - Grand Total is automatically updated when adding new products to the bag
+
+    - I have tested:
+      - That the shopping bag is always visable to the user in the header section, and that adding new products will automatically update the grand total.
+
+  - US11. Sort list:
+    - As a **Site Shopper** I can **sort the list of available products** so that **I can easily identify the best priced and categorically sorted products**
+
+    - Acceptance Criteria:
+      - User should be able to sort by price
+      - User should be able to sort by category
+      - User should be able to sort by name
+
+    - I have tested:
+      - That a user can sort products by price, name or category on the products page using the included drop-down field; Sort by.
+
+  - US12. Search product:
+    - As a **Site Shopper** I can **search for a product** so that **I can find a specific product I’d like to purchase**
+
+    - Acceptance Criteria:
+      - The search field is easily accessible to the user
+      - User can search for products by name and description
+      - User can easily see what they’ve searched for and the number of results
+
+    - I have tested:
+      - That searching for products by name or description works as expected and that the user will be presented with the total number of results found on the products page.
+      - Searching for an empty string of text will result in the following message to the user: You didn't enter any search criteria.
+
+  - US13. System messages:
+    - As a **Site User** I will **get system messages when I interact with the site** so that **I get feedback when certain actions are completed**
+
+    - Acceptance Criteria:
+      - User should get feedback through pop-up messages with relevant information
+      - The pop-up message should include a close button
+
+    - I have tested:
+      - That system / flash messages will appear correctly when performing certain actions on the site.
+      - That the system / flash message can be removed manually by clicking on the close x button.
+
+  - US14. Product purchase:
+    - As a **Site Shopper** I can **easily select a product to purchase** so that **I can continue browsing the site and viewing more products**
+
+    - Acceptance Criteria:
+      - User should be able to add a product to the shopping bag on the product details page
+      - Adding a product will automatically update the shopping bag and grand total
+
+    - I have tested:
+      - That the user is presented with the add to bag option on the product detail page, and by clicking on add to bag the product is automatically added to the shopping bag and the grand total is updated.
+    
+  - US15. Shopping bag:
+    - As a **Site Shopper** I can **view items in my bag to be purchased** so that **I can identify the total cost of my purchase and all items I will receive**
+
+    - Acceptance Criteria:
+      - User should be able to view the shopping bag and all products added
+      - User should be able to remove products and update their shopping bag
+      - User should be able to view the grand total before proceeding to the checkout page
+
+    - I have tested:
+      - That a user can access the shopping bag page by clicking on the shopping bag icon in the header section.
+      - That the shopping bag page will display all products added to the shopping bag and the grand total cost.
+      - That a user can remove a specific product from the shopping bag by clicking on the remove link.
+
+  - US16. Payment:
+    - As a **Site Shopper** I can **easily enter my payment information** so that **I can check out quickly with no hassles, and feel that my personal and payment information is safe and secure**
+
+    - Acceptance Criteria:
+      - An order summary is presented to the user with grand total
+      - Stripe is used for safe and secure payments
+
+    - I have tested:
+      - That an order summary is presented on the checkout page.
+      - That the user is required to fill out the checkout form to complete their order.
+      - That a signed in user will be able to save or not save the checkout delivery information to their profile.
+      - That a signed in user will have the checkout form fields pre-populated, if previously saved profile. 
+      - Using the stripe test card to complete an order, and signing in to stripe to verify that the payment has been successfully processed.
+
+  - US17. Order confirmation:
+    - As a **Site Shopper** I can **view an order confirmation after checkout** so that **I can verify that my purchase was successful and I haven’t made any mistakes**
+
+    - Acceptance Criteria:
+      - User is presented with full order information after checkout
+      - User should receive an confirmation email including full order information
+
+    - I have tested:
+      - That a user is redirected to the checkout success page after completing a purchase.
+      - That the correct order information is displayed on the checkout success page.
+      - That the user will receive an order confirmation to their registered email account, temp mail was used to test this feature.
+
+  - US18. Contact page:
+    - As a **Site User** I can **contact site admin** so that **I can get my questions answered or provide feedback**
+
+    - Acceptance Criteria:
+      - User should easily be able to contact store admin
+      - User should be presented with an contact form
+
+    - I have tested:
+      - That a user can access the contact page using the provided link in the header or footer section.
+      - That all form fields are required on the contact form and that subject default is Customer service. 
+      - That site admin can log in to the /admin URL with a superuser account to view any new contact inquiries.
+
+  - US19. Newsletter:
+    - As a **Site User** I can **subscribe to a newsletter** so that **I can get email informing me about new products and any changes made to the site**
+
+    - Acceptance Criteria:
+      - User should be able to subscribe to a newsletter
+      - Should be easily accessible to the user
+
+    - I have tested:
+      - That a user is presented with an embedded Mailchimp newsletter form in the footer section.
+      - That a user is required to enter an email addess and click on the Subscribe button to sign up, temp mail was used to test this feature.
+      - That email addresses can be managed under Mailchimp audience.
+
+  - US20. Facebook page:
+    - As a **Site User** I can **access the store’s Facebook business page** so that **I can view posts and updates made on Facebook and interact**
+
+    - Acceptance Criteria:
+      - Provide a link in the footer using matching Font Awesome Facebook icon
+      - The link should open in a new tab
+
+    - I have tested:
+      - That a user is presented with a link to Galleriet's facebook page in the footer section.
+      - That the link address is correct and that it opens in a new tab.
+
+  - US21. SEO:
+    - As a **Site User** I can **easily find the site using popular search engines** so that **I can take advantage of what the site has to offer**
+
+    - Acceptance Criteria:
+      - Implement Keywords and descriptive meta tags
+      - robots.txt file
+      - sitemap.xml file
+
+    - I have tested:
+      - Acceptance criteria is met and all files are present.
+      - SEO lighthouse testing.  
+
+  - US22. Responsive:
+    - As a **Site User** I can **use the site on the following platforms: desktop, laptop, tablet and smartphone** so that **I can access all functionality**
+
+    - Acceptance Criteria:
+      - Suitable graphics on different screen sizes
+      - User should be able to use the site successfully on small devices (320px wide)
+
+    - I have tested:
+      - Browser testing.
+      - Responsiveness.
+
+  - US23. Design:
+    - As a **Site User** I can **get an overall positive impression based on the principles of user experience design, accessibility and responsivity** so that **I can quickly determine the purpose of the site and enjoy using it**
+
+    - Acceptance Criteria:
+      - The user is presented with an easy to use navigation
+      - The site meets accessibility guidelines
+      - The user is presented with graphics that are consistent in style and colour
+
+    - I have tested:
+      - Browser testing.
+      - Responsiveness.
+      - Lighthouse.
+
+  - US24. Favicon:
+    - As a **Site User** I am **presented with a favicon** so that **I can get a better experience when browsing with multiple tabs**
+
+    - Acceptance Criteria:
+      - The user is presented with a favicon
+      - The favicon is matching the overall design of the site
+
+    - I have tested:
+      - That the user is presented with a favicon that is reflecting the purpose of this project.
+
+  - US25. GitHub:
+    - As a **Site User** I am **presented with a link to mittnamnkenny’s GitHub** so that **I can view more repositories**
+
+    - Acceptance Criteria:
+      - Provide a link in the footer using matching Font Awesome GitHub icon
+      - The link should open in a new tab
+
+    - I have tested:
+      - That the link address is correct and that it opens in a new tab.  
+
+  - US26. 404 page:
+    - As a **Site User** I am **presented with a custom 404 page when trying to access a URL that does not exist** so that **I can get an proper error page and easily return to the home page**
+
+    - Acceptance Criteria:
+      - The custom 404 page should be matching the overall design of the site
+      - User should be provided a link to the home page
+
+    - I have tested:
+      - That the 404 page will display when changing the URL to a broken URL path. For example: /test.
+      - That the return to shop link works.
+
+#### Testing which features support which stories
+
+User stories have been tested and below you can see which features support which stories:
+
+User stories are numbered 1 to 26 and the features are:
+
+1. Header
+2. Home page
+3. Products page
+4. Product detail page
+5. Shopping bag
+6. Checkout page
+7. Checkout success page
+8. Profile page
+9. Register page
+10. Login page
+11. Logout page
+12. Contact page
+13. Django Admin page
+14. Product management
+15. System messages
+16. Featurette
+17. Footer
+18. Web marketing
+19. Privacy Policy
+20. SEO
+21. Additional features
+
+
+| ID | User Stories                            | Features                |
+|----|---------------------------------------- |-------------------------|
+|  1 | Add products                            | 14                      |
+|  2 | Update products                         | 14                      |
+|  3 | Delete products                         | 14                      |
+|  4 | Account registration                    | 9                       |
+|  5 | Login/Logout                            | 10, 11                  |
+|  6 | Password reset                          | 10                      |
+|  7 | Personalized profile                    | 8                       |
+|  8 | View products                           | 2, 3                    |
+|  9 | Product detail                          | 4                       |
+| 10 | View total                              | 1                       |
+| 11 | Sort list                               | 3                       |
+| 12 | Search product                          | 1                       |
+| 13 | System messages                         | 21                      |
+| 14 | Product purchase                        | 4                       |
+| 15 | Shopping bag                            | 5                       |
+| 16 | Payment                                 | 6                       |
+| 17 | Order confirmation                      | 7                       |
+| 18 | Contact page                            | 12                      |
+| 19 | Newsletter                              | 17, 18                  |
+| 20 | Facebook page                           | 17, 18                  |
+| 21 | SEO                                     | 20                      |
+| 22 | Responsive                              | OK *                    |
+| 23 | Design                                  | OK *                    |
+| 24 | Favicon                                 | 21                      |
+| 25 | GitHub                                  | 17                      |
+| 26 | 404 page                                | 21                      |
+
+  - OK - Tested and verifed ok in Browser Testing and Responsiveness
+
+### Further Testing
+
+  - I have tested that the hover effect on all buttons and links works as expected.
+  - I have tested that all animations work correctly.
+
+### Known bugs
+
+  - Currently no known bugs.
