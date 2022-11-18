@@ -15,6 +15,70 @@ This project is for educational purposes only!
   * [User stories:](#user-stories)
 * [Features](#features)
   * [Existing Features](#existing-features)
+    * [Header:](#header)
+    * [Home page:](#home-page)
+    * [Products page:](#products-page)
+    * [Product detail page:](#product-detail-page)
+    * [Shopping bag:](#shopping-bag)
+    * [Checkout page:](#checkout-page)
+    * [Checkout success page:](#checkout-success-page)
+    * [Profile page:](#profile-page)
+    * [Register / Sign up page:](#register--sign-up-page)
+    * [Login / Sign in page:](#login--sign-in-page)
+    * [Logout / Sign out page:](#logout--sign-out-page)
+    * [Contact page:](#contact-page)
+    * [Django Admin page:](#django-admin-page)
+    * [Product management:](#product-management)
+    * [System Messages:](#system-messages)
+    * [Featurette:](#featurette)
+    * [Footer:](#footer)
+    * [Web marketing:](#web-marketing)
+    * [Privacy Policy:](#privacy-policy)
+    * [SEO:](#seo)
+    * [Additional features:](#additional-features)
+  * [Features that could be implemented in the future:](#features-that-could-be-implemented-in-the-future)
+    * [Product inventory:](#product-inventory)
+* [Design](#design)
+  * [Wireframes](#wireframes)
+    * [Home page:](#home-page)
+    * [Products page:](#products-page)
+    * [Product detail page:](#product-detail-page)
+    * [Shopping bag:](#shopping-bag)
+    * [Checkout page:](#checkout-page)
+    * [Profile page:](#profile-page)
+    * [Contact page:](#contact-page)
+    * [Mobile devices:](#mobile-page)
+  * [Data Model](#data-model)
+  * [Site map](#site-map)
+  * [Colours](#colours)
+  * [Typography](#typography)
+  * [Imagery](#imagery)
+* [Technologies Used](#technologies-used)
+  * [Languages Used:](#languages-used)
+  * [Python packages Used:](#python-packages-used)
+  * [Frameworks, Libraries and Software Used:](#frameworks-libraries-and-software-used)
+* [Testing](#testing)
+  * [Browser Testing](#browser-testing)
+  * [Responsiveness](#responsiveness)
+  * [Validator Testing](#validator-testing)
+    * [W3C Markup Validator:](#w3c-markup-validator)
+    * [W3C CSS Validator:](#w3c-css-validator)
+    * [JSHint:](#jshint)
+    * [Python Validation:](#python-validation)
+    * [Lighthouse:](#lighthouse)
+  * [User Stories testing](#user-stories-testing)
+    * [Testing which features support which stories](#testing-which-features-support-which-stories)
+  * [Further Testing](#further-testing)
+  * [Known bugs](#known-bugs)
+* [Deployment](#deployment)
+  * [Heroku](#heroku)
+  * [Amazon Web Services (AWS)](#amazon-web-services-aws)
+  * [Stripe](#stripe)
+  * [Emails](#emails)
+  * [Clone the Repository](#clone-the-repository)
+* [Credits](#credits)
+  * [Media](#media)
+  * [Acknowledgements](#acknowledgements)
 
 ## User Experience (UX)
 
@@ -541,7 +605,10 @@ Wireframes were created for the following pages and features:
 
 This project is hosted on [Heroku](https://www.heroku.com/) and the database used is Heroku PostgreSQL. 
 [Amazon Web Services (AWS)](https://aws.amazon.com) is used to store all static files and images. 
-This project is based on Code Institute's walkthrough project Boutique Ado, Building an E-Commerce Platform. 
+This project is based on Code Institute's walkthrough project Boutique Ado, Building an E-Commerce Platform.
+
+Note: As Heroku no longer includes free access to the Postgres add-on, the database has been migrated to use a new service called [ElephantSQL](https://www.elephantsql.com).
+  - [More information](https://code-institute-students.github.io/deployment-docs/02-elephantsql/elephantsql-01-sign-up)
 
 Four custom models were created for this project; Product, Artist, Contact and OrderLineItem.
 
@@ -633,12 +700,13 @@ All product images used in this project are real paintings created by mittnamnke
   - [Bootstrap:](https://getbootstrap.com/) Bootstrap CSS Framework used for styling and to build responsive web pages.
   - [Chrome DevTools:](https://developer.chrome.com/docs/devtools/) Used to test the response on different screen sizes, debugging and to generate a Lighthouse report to analyze page load.  
   - [Django:](https://www.djangoproject.com/) Main Python framework used in the development.
+  - [ElephantSQL](https://www.elephantsql.com) PostgreSQL database as a Service.
   - [Font Awesome:](https://fontawesome.com/) Used throughout the site to add icons for aesthetic and UX purposes.
   - [Git:](https://git-scm.com/) Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
   - [GitHub:](https://github.com/) GitHub is used to store the projects code after being pushed from Git and to create the Kanban board used for this project.
   - [Gmail:](https://www.google.com/intl/sv/gmail/about/) Galleriet's main mail account.
   - [Heroku:](https://www.heroku.com/) For deployment and hosting of the application.
-  - [Heroku PostgreSQL:](https://www.heroku.com/postgres) The database used for this application.
+  - [Heroku PostgreSQL:](https://www.heroku.com/postgres) The former database used for this application.
   - [HTML Validator:](https://validator.w3.org/) Check your code for HTML validation.
   - [JSHint:](https://jshint.com/) Check code for JavaScript validation.
   - [jQuery:](https://jquery.com/) JavaScript library.  
@@ -676,73 +744,113 @@ Chrome developer tool have been used to check the responsiveness.
 
 ### Validator Testing
 
+#### W3C Markup Validator:
+
 The W3C Markup Validator were used to validate the HTML on all pages of the project to ensure there were no syntax errors in there. To validate the HTML files all Django template tags were manually removed with the HTML code copied and inserted to the base template.
 
 Index page:
 
 ![HTML Index](documentation/testing/htmlchecker-index.png)
 
+Index page - [View Full HTML Validation Results here.](https://github.com/mittnamnkenny/galleriet/blob/main/documentation/testing/htmlcheckerfull-index.pdf)
+
 Products page:
 
 ![HTML Products](documentation/testing/htmlchecker-products.png)
+
+Products page - [View Full HTML Validation Results here.](https://github.com/mittnamnkenny/galleriet/blob/main/documentation/testing/htmlcheckerfull-products.pdf)
 
 Product detail page:
 
 ![HTML Detail](documentation/testing/htmlchecker-productdetail.png)
 
+Product detail page - [View Full HTML Validation Results here.](https://github.com/mittnamnkenny/galleriet/blob/main/documentation/testing/htmlcheckerfull-productdetail.pdf)
+
 Shopping bag:
 
 ![HTML Bag](documentation/testing/htmlchecker-bag.png)
+
+Shopping bag - [View Full HTML Validation Results here.](https://github.com/mittnamnkenny/galleriet/blob/main/documentation/testing/htmlcheckerfull-bag.pdf)
 
 Checkout page:
 
 ![HTML Checkout](documentation/testing/htmlchecker-checkout.png)
 
+Checkout page - [View Full HTML Validation Results here.](https://github.com/mittnamnkenny/galleriet/blob/main/documentation/testing/htmlcheckerfull-checkout.pdf)
+
 Checkout success page:
 
 ![HTML Success](documentation/testing/htmlchecker-checkoutsuccess.png)
+
+Checkout success page - [View Full HTML Validation Results here.](https://github.com/mittnamnkenny/galleriet/blob/main/documentation/testing/htmlcheckerfull-checkoutsuccess.pdf)
 
 Profile page:
 
 ![HTML Profile](documentation/testing/htmlchecker-profile.png)
 
+Profile page - [View Full HTML Validation Results here.](https://github.com/mittnamnkenny/galleriet/blob/main/documentation/testing/htmlcheckerfull-profile.pdf)
+
 Register / Sign up page:
 
 ![HTML Register](documentation/testing/htmlchecker-signup.png)
+
+Register / Sign up page - [View Full HTML Validation Results here.](https://github.com/mittnamnkenny/galleriet/blob/main/documentation/testing/htmlcheckerfull-signup.pdf)
 
 Login / Sign in page:
 
 ![HTML Login](documentation/testing/htmlchecker-login.png)
 
+Login / Sign in page - [View Full HTML Validation Results here.](https://github.com/mittnamnkenny/galleriet/blob/main/documentation/testing/htmlcheckerfull-login.pdf)
+
 Logout / Sign out page:
 
 ![HTML Logout](documentation/testing/htmlchecker-logout.png)
+
+Logout / Sign out page - [View Full HTML Validation Results here.](https://github.com/mittnamnkenny/galleriet/blob/main/documentation/testing/htmlcheckerfull-logout.pdf)
 
 Contact page:
 
 ![HTML Contact](documentation/testing/htmlchecker-contact.png)
 
+Contact page - [View Full HTML Validation Results here.](https://github.com/mittnamnkenny/galleriet/blob/main/documentation/testing/htmlcheckerfull-contact.pdf)
+
 Add product page:
 
 ![HTML Add](documentation/testing/htmlchecker-addproduct.png)
+
+Add product page - [View Full HTML Validation Results here.](https://github.com/mittnamnkenny/galleriet/blob/main/documentation/testing/htmlcheckerfull-addproduct.pdf)
 
 Edit product page:
 
 ![HTML Edit](documentation/testing/htmlchecker-editproduct.png)
 
+Edit product page - [View Full HTML Validation Results here.](https://github.com/mittnamnkenny/galleriet/blob/main/documentation/testing/htmlcheckerfull-editproduct.pdf)
+
 Privacy policy page:
 
 ![HTML Privacy](documentation/testing/htmlchecker-privacypolicy.png)
 
+Privacy policy page - [View Full HTML Validation Results here.](https://github.com/mittnamnkenny/galleriet/blob/main/documentation/testing/htmlcheckerfull-privacypolicy.pdf)
+
 404 page:
 
 ![HTML 404](documentation/testing/htmlchecker-404.png)
+
+404 page - [View Full HTML Validation Results here.](https://github.com/mittnamnkenny/galleriet/blob/main/documentation/testing/htmlcheckerfull-404.pdf)
 
 #### W3C CSS Validator:
 
 The W3C CSS Validator Services were used to validate the CSS to ensure there were no errors in there.
 
 ![W3C CSS](documentation/testing/w3ccssvalidator.png)
+
+base - [View Full CSS Validation Results here.](https://github.com/mittnamnkenny/galleriet/blob/main/documentation/testing/w3ccssvalidatorfull-base.pdf)
+
+checkout - [View Full CSS Validation Results here.](https://github.com/mittnamnkenny/galleriet/blob/main/documentation/testing/w3ccssvalidatorfull-checkout.pdf)
+
+contact - [View Full CSS Validation Results here.](https://github.com/mittnamnkenny/galleriet/blob/main/documentation/testing/w3ccssvalidatorfull-contact.pdf)
+
+profile - [View Full CSS Validation Results here.](https://github.com/mittnamnkenny/galleriet/blob/main/documentation/testing/w3ccssvalidatorfull-profile.pdf)
 
 #### JSHint:
 
@@ -763,6 +871,8 @@ Product JS:
 Stripeelements JS:
 
 ![JSHint stripeelements](documentation/testing/jshint-stripeelements.png)
+
+stripeelements - [View Full JSHint Results here.](https://github.com/mittnamnkenny/galleriet/blob/main/documentation/testing/jshintfull-stripeelements.pdf)
 
 #### Python Validation:
 
@@ -1209,3 +1319,225 @@ User stories are numbered 1 to 26 and the features are:
 ### Known bugs
 
   - Currently no known bugs.
+
+## Deployment
+
+### Heroku
+
+The application was deployed to Heroku. The steps to deploy are as follows:
+
+Note: As Heroku no longer includes free access to the Postgres add-on, the database has been migrated to use a new service called [ElephantSQL](https://www.elephantsql.com). More information click [Here.](https://code-institute-students.github.io/deployment-docs/02-elephantsql/elephantsql-01-sign-up)
+
+  - Login to [Heroku](https://dashboard.heroku.com/apps) dashboard to get an overview of installed apps.
+  - From the Heroku dashboard, Click on New and Create new app.
+  - You will be asked to choose a name for your application (the name must be unique) and enter your location.
+  - Then click on Create app.
+  - After creating your new application, navigate and click on the Resources tab.
+  - In the Add-ons search bar enter Heroku Postgres and Select Heroku Postgres.
+  - A pop-up window will appear, choose Plan name Hobby Dev - Free and click on Submit order form.
+  - In Gitpod, install dj_database_url (pip3 install dj_database_url==0.5.0) and psycopg2 (pip3 install psycopg2) using the terminal.
+  - Freeze the requirements by using the following command in the terminal: pip3 freeze > requirements.txt
+  - Update settings.py: import dj_database_url, comment out and replace the default sqlite3 database with dj_database_url.parse and give it the database URL from Heroku Config Vars.
+  - Run the following command in the terminal to migrate: python3 manage.py migrate
+  - Create a new superuser with the following command in the terminal: python3 manage.py createsuperuser
+  - Update settings.py to use postgres database in production and the sqlite3 in development.
+
+    ```
+      if 'DATABASE_URL' in os.environ:
+          DATABASES = {
+              'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+          }
+      else:
+          DATABASES = {
+              'default': {
+              'ENGINE': 'django.db.backends.sqlite3',
+              'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+          }
+      }
+    ```
+
+  - Install gunicorn using the command in the terminal: pip3 install gunicorn
+  - Freeze the requirements by using the following command in the terminal: pip3 freeze > requirements.txt
+  - Create a Procfile in the root directory and add the following line: web: gunicorn galleriet.wsgi:application
+  - In Heroku Config Vars, temporary disable collectstatic by adding DISABLE_COLLECTSTATIC and assigning it a value of 1.
+  - In Gitpod, update settings.py, add the hostname of the Heroku app to ALLOWED_HOSTS.
+
+    ```
+      ALLOWED_HOSTS = ['galleriet-mittnamnkenny.herokuapp.com', 'localhost']
+    ```
+
+  - Initialize the Heroku git remote by using the following command in the terminal: heroku git:remote -a galleriet-mittnamnkenny
+  - Use the command in the terminal to push to Heroku: git push heroku main
+  - In Heroku, enable automatic deployments by clicking on the deploy tab and search the GitHub repository, then click on connect and Enable Automatic Deploys.
+  - In Config Vars, add a new Config Var called SECRET_KEY and assign it a value using Django secret key generator.
+  - In Gitpod, update settings.py, change Debug mode to True only in Development mode and set SECRET_KEY
+
+    ```
+      SECRET_KEY = os.environ.get('SECRET_KEY', '')
+
+      DEBUG = 'DEVELOPMENT' in os.environ
+    ```
+
+  - In the Gitpod terminal, add, commit and push to GitHub.
+
+### Amazon Web Services (AWS)
+
+[Amazon Web Services](https://aws.amazon.com) is used to store all static files and images. Configure Amazon Web Services S3:
+
+  - Login to AWS and from the dashboard, search for S3 service.
+  - Open S3 and create a new bucket.
+  - Enter a name for the bucket (recommended a name similar to the application name), and selected region closest. In settings make sure: ACLs enabled option is checked, Bucket owner preferred option is checked, Block Public Access option is unchecked (Allows public access to our static files) and Acknowledge that the bucket will be public option checked before clicking on create bucket.
+  - When the new bucket is created. Click on the name of the bucket, navigate and click on the properties tab.
+  - Under Static website hosting, click Edit and select enable. For index and error document fill in default value, index.html and error.html and click save.
+  - Navigate and click on the permissions tab, click on CORS and edit.
+  - Paste the following CORS configuration and click save:
+
+    ```
+      [
+          {
+              "AllowedHeaders": [
+                  "Authorization"
+              ],
+              "AllowedMethods": [
+                  "GET"
+              ],
+              "AllowedOrigins": [
+                  "*"
+              ],
+              "ExposeHeaders": []
+          }
+      ]
+    ```
+
+  - Navigate to the Bucket policy tab and click on Edit. 
+  - Click on and open Policy generator (Opens in a new tab).
+  - Select type of Policy: S3 bucket Policy, allow all principal by using a * in the Principal field, in the actions dropdown option select GetObject, copy the ARN value from the S3 management console tab window and paste it in to the ARN box.
+  - Click on Add statement, then generate policy and copy the generated policy to the bucket Policy editor. Before saving the add /* to the end of the resource key:
+
+    ```
+      "Resource": ”arn…/*”,
+    ```
+  
+  - Navigate to the Access control list tab and click edit. Enable List for Everyone (public access) and accept the warning box then click save.
+  - From the dashboard, search for IAM and navigate to user groups and click on create group.
+  - Enter a name for the group, for example: manage-galleriet
+  - Click on Policies, then Create Policy, go to JSON tab and click Import Managed Policy
+  - Search for S3 and import the AmazonS3FullAccess.
+  - Update the the Resource value with your bucket ARN from the bucket policy page:
+
+    ```
+      "Resource": [ "arn…", "arn…/*" ]
+    ```
+  
+  - Click Next and Next: Review. Give the policy a name, for example: galleriet-policy and description then click on Create Policy.
+  - Navigate to User groups and add the created policy to your previously created user group by clicking on Add permissions.
+  - Navigate to Users and click on Add user.
+  - Enter a name for the user, for example: galleriet-staticfiles-user and make sure Programmatic access option is checked.
+  - Click on Next: Permissions, add the user to the group and click through to the end and click Create User.
+  - Download the generated CSV file which contains users access key and secret access key. Do not delete the CSV file, this file cannot be downloaded again.
+  - In Gitpod, install boto3 (pip3 install boto3) and django-storages (pip3 install django-storages) using the terminal.
+  - Freeze the requirements by using the following command in the terminal: pip3 freeze > requirements.txt
+  - Update settings.py, add storages to INSTALLED_APPS and add the following settings:
+
+    ```
+      if 'USE_AWS' in os.environ:
+          # Cache control
+          AWS_S3_OBJECT_PARAMETERS = {
+              'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+              'CacheControl': 'max-age=94608000',
+          }
+
+          # Bucket Config
+          AWS_STORAGE_BUCKET_NAME = 'galleriet-mittnamnkenny'
+          AWS_S3_REGION_NAME = 'eu-north-1'
+          AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+          AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+          AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+
+          # Static and media files
+          STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+          STATICFILES_LOCATION = 'static'
+          DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+          MEDIAFILES_LOCATION = 'media'
+
+          # Override static and media URLs in production
+          STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
+          MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
+    ```
+
+  - In Heroku Config Vars, Add the AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY config vars from the downloaded CSV file and add USE_AWS True. Remove the DISABLE_COLLECTSTATIC config var.
+  - In Gitpod root folder, create a new file named: custom_storages.py with the following content:
+
+    ```
+      from django.conf import settings
+      from storages.backends.s3boto3 import S3Boto3Storage
+
+
+      class StaticStorage(S3Boto3Storage):
+          location = settings.STATICFILES_LOCATION
+
+
+      class MediaStorage(S3Boto3Storage):
+          location = settings.MEDIAFILES_LOCATION
+    ```
+
+  - In the Gitpod terminal, add, commit and push to GitHub.
+  - Created a new folder in the AWS S3 bucket named Media and upload all media images. Make sure to grant public-read access to this folder.
+
+### Stripe
+
+Configure Stripe config vars and webhooks:
+
+  - Login to [Stripe](https://stripe.com/se) and from the dashboard, search for API Keys.
+  - Copy STRIPE_PUBLIC_KEY and STRIPE_SECRET_KEY and add them to Heroku config vars, assign these variables values from your Stripe account.
+  - Create a Webhook Endpoint in the Stripe by navigating to webhooks and clicking on Add endpoint. Use the Heroku application url with checkout/wh/ added to the end of the url string. Select all events and click Add endpoint.
+  - Click on Reveal signing secret and save this value as a Heroku config var called STRIPE_WH_SECRET.
+
+### Emails
+
+  The following settings were used in settings.py to connect the application to send emails via Gmail. 
+    
+      if 'DEVELOPMENT' in os.environ:
+          EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+          DEFAULT_FROM_EMAIL = 'galleriet.code@gmail.com'
+      else:
+          EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+          EMAIL_USE_TLS = True
+          EMAIL_PORT = 587
+          EMAIL_HOST = 'smtp.gmail.com'
+          EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
+          EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASS')
+          DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
+
+  - Add Heroku config vars EMAIL_HOST_PASS and EMAIL_HOST_USER.
+
+### Clone the Repository
+
+  - Navigate to galleriet repository on GitHub.
+  - Click on the green Code button and copy the HTTPS address.
+  - In Gitpod terminal window, navigate to the directory where you want to locate the clone.
+  - Type git clone then paste in the previously copied HTTPS address and press enter.
+  - To install the packages required by the application use the command : pip install -r requirements.txt
+
+## Credits
+
+  - [Bootstrap documentation:](https://getbootstrap.com/docs/4.6/getting-started/introduction/) Bootstrap documentation used for styling and to build responsive web pages.
+  - [Code Institute:](https://codeinstitute.net/) This project is based on Code Institute's walkthrough project Boutique Ado, Building an E-Commerce Platform.
+  - [Code Institute Slack Community:](https://app.slack.com/) Slack community for troubleshooting and FAQ.
+  - [Code Institute Tutor Support:](https://app.slack.com/) For help and support.
+  - [Django documentation:](https://docs.djangoproject.com/en/4.1/) Everything you need to know about Django.
+  - [GitHub Checkout:](https://www.youtube.com/watch?v=BplF7vHXewA) How to break issues into actionable tasks.
+  - [Privacy Policy Generator.](https://www.privacypolicygenerator.info/) To generate the Privacy Policy.
+  - [Stack Overflow:](https://stackoverflow.com) For troubleshooting and FAQ.
+  - [W3Schools:](https://www.w3schools.com) Online Web Tutorials.
+  - [Wordtracker](https://www.wordtracker.com/) Keyword research.
+
+  ### Media
+
+  - [Unsplash:](https://unsplash.com/photos/0YZekL_Kp2E) Abstract painting photo, Steve Johnson
+  - [Tomas K:](https://galleri.black/flyfishing/) Tomas K Galleri
+
+### Acknowledgements
+
+  - My mentor at Code Institute Brian Macharia for code review, help and feedback throughout each project on this course. Very much appreciated!
+  - My family and friend Tomas for letting me use their paintings in this project.
