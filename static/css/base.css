@@ -94,6 +94,10 @@ body {
     width: 18rem;
 }
 
+.recent-products .card img {
+    max-height: 300px !important;
+}
+
 .image-container {
     position: relative;
 }
@@ -165,11 +169,15 @@ body {
 .card img {
     height: 100%;
     width: 100%;
+    max-height: 700px !important;
+    object-fit: cover !important;
 }
 
 .image-container .card-img-top {
     height: 100%;
     width: 100%;
+    max-height: 900px !important;
+    object-fit: contain !important;
 }
 
 .form-control:not([type='submit']) {
